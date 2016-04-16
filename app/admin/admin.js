@@ -1,18 +1,11 @@
 angular.module('app').component('admin', {
     templateUrl: '/admin/admin.html',
     bindings: {
-        currentAuth: '='
     },
-    controller: function (auth, $location) {
-        this.loggedIn = !!this.currentAuth;
-
-        this.logout = function () {
-            auth.$unauth();
-            console.log("Utloggad");
-            $location.path('/home');
-        }
+    controller: function ($location) {
+       this.setEditMode = function() {
+           
+       }
         
-        var authData = auth.$getAuth();
-        this.user = authData.uid;
     }
 })

@@ -1,127 +1,17 @@
 <div class="android-content">
-    <ul class="members-list-three mdl-list">
-        <li class="mdl-list__item mdl-list__item--three-line">
-            <span class="mdl-list__item-primary-content">
+      <ul class="members-list-three mdl-list">
+            <li ng-repeat="member in $ctrl.members" class="mdl-list__item mdl-list__item--three-line">
+                  <span class="mdl-list__item-primary-content">
+     
       <i class="material-icons mdl-list__item-avatar">person</i>
-      <span>Emil Jorlin</span>
-            <span class="mdl-list__item-text-body">
-        Urmedlem. Bygdens son som är "bäst när det inte gäller". Spelar i J Lindeberg-keps sommaren 1996.
-      </span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a>
+      <span>{{member.name}}</span>
+                  <span class="mdl-list__item-text-body">
+        {{member.desc}}
+        </span>
+                  </span>
+                  <span class="mdl-list__item-secondary-content">
+      <a class="mdl-list__item-secondary-action"><i ng-repeat="member.master" class="material-icons">star</i></a>
     </span>
-        </li>
-        
-        <li class="mdl-list__item mdl-list__item--three-line">
-            <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">person</i>
-      <span>Magnus Åhl</span>
-            <span class="mdl-list__item-text-body">
-         Urmedlem. Långtslående ordförande samt regelexpert. Har spelat med en arm utan att det märktes nån direkt skillnad. Om man säger så.
-      </span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action"><i class="material-icons">star</i>
-           <i class="material-icons">star</i>
-           <i class="material-icons">star</i>
-           <i class="material-icons">star</i>
-           <i class="material-icons">star</i>
-      </a>
-    </span>
-        </li>
-        
-        
-        <li class="mdl-list__item mdl-list__item--three-line">
-            <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">person</i>
-      <span>Stefan Högdahl</span>
-            <span class="mdl-list__item-text-body">
-         Urmedlem. Urstor blåsa. Alltså nåt alldeles överjävligt stor. 
-      </span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action">
-           </a>
-    </span>
-        </li>
-        
-        
-        <li class="mdl-list__item mdl-list__item--three-line">
-            <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">person</i>
-      <span>Ronnie Hilmersson</span>
-            <span class="mdl-list__item-text-body">
-         Eldar det mesta. Trevlig. Äger egen golfbara, bara en sån sak.
-      </span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action">
-           </a>
-    </span>
-        </li>
-        
-        <li class="mdl-list__item mdl-list__item--three-line">
-            <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">person</i>
-      <span>Daniel Joelsson</span>
-            <span class="mdl-list__item-text-body">
-         Stadig lirare och "late bloomer". Blir bara bättre och bättre. Stor utrustningsbudget.
-      </span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action">
-      </a>
-    </span>
-        </li>
-        
-        <li class="mdl-list__item mdl-list__item--three-line">
-            <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">person</i>
-      <span>Fredrik Wennstam</span>
-            <span class="mdl-list__item-text-body">
-         Urmedlem. Lång (längst av alla rent utav). Slår relativt rakt, ibland i fel riktning. Även smal.
-      </span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action">
-      </a>
-    </span>
-        </li>
-        
-        <li class="mdl-list__item mdl-list__item--three-line">
-            <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">person</i>
-      <span>Martin Gustafsson</span>
-            <span class="mdl-list__item-text-body">
-                Spelar bättre vid en promillehalt närmare 1 än 0. Vinner normalt tävlingen. 
-      </span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action">
-          <i class="material-icons">star</i>
-          <i class="material-icons">star</i>
-          <i class="material-icons">star</i>
-          <i class="material-icons">star</i>
-          <i class="material-icons">star</i>
-          <i class="material-icons">star</i></a>
-    </span>
-        </li>
-        
-        
-        <li class="mdl-list__item mdl-list__item--three-line">
-            <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">person</i>
-      <span>Anders Edvardsson</span>
-            <span class="mdl-list__item-text-body">
-               Helt oprövat kort. Spännande nyförvärv efter en ca åtta års lång scoutingprocess. Känn pressen.
-      </span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action">
-          </a>
-    </span>
-        </li>
-    </ul>
-
+            </li>
+      </ul>
 </div>

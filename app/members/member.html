@@ -1,17 +1,25 @@
 <div class="row container-fluid">
-    <div class="col-sm-5">
-        <form class="form-line">
-            <strong>Export Open Id:<small> {{$ctrl.memberId}}</small></strong>
+    <div class="col-sm-7">
+            <strong>EOid:</strong><small> {{$ctrl.memberId}}</small>
 
-            <div class="input-group margin-bottom-sm">
+        <form>
+            <div class="input-group margin-bottom-lg">
                 <span class="input-group-addon">Namn</span>
                 <input class="form-control input-md" type="text" ng-model="$ctrl.member.name">
             </div>
             <br>
+            <div class="col-md-2 input-group margin-bottom-lg" >
+                <span class="input-group-addon">Hcp...</span>
+                <input class="form-control input-md" type="text" ng-model="$ctrl.member.hcp">
+            </div>
+        
+            <br>
             <div class="input-group">
                 <span class="input-group-addon">Om...</span>
-                <textarea class="form-control input-md" style="font-size: 10px" rows="6" ng-model="$ctrl.member.desc"></textarea>
+                <textarea class="form-control input-md"  rows="6" ng-model="$ctrl.member.desc"></textarea>
             </div>
+            <br>
+            
 
             <div class="input-group">
                 <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
@@ -19,13 +27,12 @@
                 <span class="mdl-switch__label"> Nykter / Onykter</span>
                  </label>
             </div>
+             <br><br>   
             <div class="input-group pull-right">
-
                 <button class="btn btn-md btn-normal " ng-click="$ctrl.save()" type="submit">
-                <i class="fa fa-save pull-left"></i> Cancel
-                </button>
-                &nbsp;&nbsp;&nbsp;
-                <button class="btn btn-lg btn-success" ng-click="$ctrl.save()" type="submit">
+                <i class="fa fa pull-left"></i> Avbryt
+                </button> &nbsp;&nbsp;&nbsp;
+                <button class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
                 <i class="fa fa-save pull-left"></i> Spara
                 </button>
             </div>
@@ -33,7 +40,7 @@
         </form>
 
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-1">
     </div>
     <div class="col-sm-4">
         <button class="btn btn-md btn-warning pull-right" ng-show="$ctrl.loggedIn" ng-click="$ctrl.logout()" type="submit">

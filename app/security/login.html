@@ -1,0 +1,30 @@
+<div class="row container-fluid" ng-hide="$ctrl.loggedIn">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form>
+            <div class="input-group margin-bottom-sm">
+                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                <input class="form-control input-lg" type="text" ng-model="email" placeholder="Email">
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                <input class="form-control input-lg" type="password" ng-model="pass" placeholder="Lösenord">
+            </div>
+
+            <br>
+            <div class="col-sm-offset-4">
+                <button class="btn btn-lg btn-default" ng-click="$ctrl.login(email, pass)" type="submit">
+                    <i class="fa fa-login fa-2x pull-left"></i> Logga in
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row container-fluid" ng-show="$ctrl.loggedIn">
+    <h1>Du är inne!</h1>
+    <button class="btn btn-lg btn-default" ng-click="$ctrl.logout()" type="submit">
+                <i class="fa fa-login fa-2x pull-left"></i> Logga ut
+    </button>
+
+</div>    
+<p ng-show="!!$ctrl.errorMessage" class="error">{{errorMessage}}</p>

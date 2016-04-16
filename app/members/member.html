@@ -1,0 +1,46 @@
+<div class="row container-fluid">
+    <div class="col-sm-5">
+        <form class="form-line">
+            <strong>Export Open Id:<small> {{$ctrl.memberId}}</small></strong>
+
+            <div class="input-group margin-bottom-sm">
+                <span class="input-group-addon">Namn</span>
+                <input class="form-control input-md" type="text" ng-model="$ctrl.member.name">
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon">Om...</span>
+                <textarea class="form-control input-md" style="font-size: 10px" rows="6" ng-model="$ctrl.member.desc"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                <input type="checkbox" ng-model="$ctrl.member.uti" id="switch-1" class="mdl-switch__input" checked>
+                <span class="mdl-switch__label"> Nykter / Onykter</span>
+                 </label>
+            </div>
+            <div class="input-group pull-right">
+
+                <button class="btn btn-md btn-normal " ng-click="$ctrl.save()" type="submit">
+                <i class="fa fa-save pull-left"></i> Cancel
+                </button>
+                &nbsp;&nbsp;&nbsp;
+                <button class="btn btn-lg btn-success" ng-click="$ctrl.save()" type="submit">
+                <i class="fa fa-save pull-left"></i> Spara
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-4">
+        <button class="btn btn-md btn-warning pull-right" ng-show="$ctrl.loggedIn" ng-click="$ctrl.logout()" type="submit">
+                <i class="fa fa-sign-out pull-left"></i> Logga ut
+    </button>
+
+
+    </div>
+
+</div>

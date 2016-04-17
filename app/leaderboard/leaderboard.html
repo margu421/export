@@ -1,33 +1,38 @@
-<div class="leaderBoardRow playerRow hoverable inview">
-    <div class="prior">
-        <div class="data">
-            <div class="data"></div>
-        </div>
-    </div>
-    <div class="playerContainer">
-        <div class="playerName">
-            <div class="data ">Gustafsson </div>
-        </div>
-        <div class="score" ng-repeat="holes in $ctrl.holes">
-            <div class="data"></div>
-        </div>
+<table class="table table-bordered">
+    <thead>
+        <th><i class="fa fa-undo"></th>
+        <th><i class="fa fa-glass"></i></th>
+        <th>Spelare</th>
+        <th>01</th>
+        <th>02</th>
+        <th>03</th>
+        <th>04</th>
+        <th>05</th>
+        <th>06</th>
+        <th>07</th>
+        <th>08</th>
+        <th>09</th>
+        <th></th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+        <th>14</th>
+        <th>15</th>
+        <th>16</th>
+        <th>17</th>
+        <th>18</th>
 
-    </div>
-</div>
-<div class="leaderBoardRow playerRow hoverable inview">
-    <div class="prior">
-        <div class="data">
-            <div class="data"></div>
-        </div>
-    </div>
-    <div class="playerContainer">
-        <div class="playerName">
-            <div class="data ">Jorlin </div>
-        </div>
 
-        <div class="score" ng-repeat="holes in $ctrl.holes">
-            <div class="data"></div>
-        </div>
-
-    </div>
-</div>
+    </thead>
+    <tbody>
+        <!--<tr ng-repeat="player in $ctrl.players | orderBy: 'startNumber'">-->
+            <td></td>
+            <td>1</td>
+            <td><span class="badge">{{player.startNumber | number: 0}}</span></td>
+            <td>{{player.$id}}</td>
+        </tr>
+    </tbody>
+</table>
+            <button class="btn btn-md btn-danger pull-right" type="submit" ng-click="$ctrl.saveRound()">
+                    <i class="fa fa-stop"></i> Avsluta runda</button>

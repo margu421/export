@@ -1,26 +1,33 @@
 <div class="row container-fluid">
-    <div class="col-sm-7">
-            <strong>EOid:</strong><small> {{$ctrl.memberId}}</small>
+    <div class="col-sm-9">
 
-        <form>
+        <form class="form-inline">
             <div class="input-group margin-bottom-lg">
                 <span class="input-group-addon">Namn</span>
                 <input class="form-control input-md" type="text" ng-model="$ctrl.member.name">
             </div>
-            <br>
-            <div class="col-md-2 input-group margin-bottom-lg" >
+            <br><br>
+
+            <div class="col-md-3 input-group margin-bottom-lg" >
                 <span class="input-group-addon">Hcp...</span>
                 <input class="form-control input-md" type="text" ng-model="$ctrl.member.hcp">
             </div>
-        
-            <br>
-            <div class="input-group">
-                <span class="input-group-addon">Om...</span>
-                <textarea class="form-control input-md"  rows="6" ng-model="$ctrl.member.desc"></textarea>
+            <div class="col-md-3 input-group margin-bottom-lg" >
+                <span class="input-group-addon">Längd</span>
+                <input class="form-control input-md" type="text" ng-model="$ctrl.member.height">
+            </div>
+            <div class="col-md-3 input-group margin-bottom-lg" >
+                <span class="input-group-addon">Vikt</span>
+                <input class="form-control input-md" type="text" ng-model="$ctrl.member.weight">
+            </div>    
+                <br><br>
+
+            <div class="input-group col-md-9">
+                <strong>Beskrivning</strong><small> av {{$ctrl.member.name}}</small>
+
+                <textarea class="form-control textarea"  rows="6" ng-model="$ctrl.member.desc"></textarea>
             </div>
             <br>
-            
-
             <div class="input-group">
                 <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
                 <input type="checkbox" ng-model="$ctrl.member.uti" id="switch-1" class="mdl-switch__input" checked>
@@ -28,13 +35,15 @@
                  </label>
             </div>
              <br><br>   
-            <div class="input-group pull-right">
-                <button class="btn btn-md btn-normal " ng-click="$ctrl.save()" type="submit">
+            <div class="input-group col-md-9">
+                <div class="pull-right">
+                <button class="btn btn-md btn-normal" ng-click="$ctrl.cancel()" type="submit">
                 <i class="fa fa pull-left"></i> Avbryt
-                </button> &nbsp;&nbsp;&nbsp;
+                </button>&nbsp;&nbsp;&nbsp; 
                 <button class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
-                <i class="fa fa-save pull-left"></i> Spara
+                <i class="fa fa-save fa-2x pull-left"></i> Spara
                 </button>
+                </div>
             </div>
 
         </form>
@@ -42,7 +51,7 @@
     </div>
     <div class="col-sm-1">
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-2">
         <button class="btn btn-md btn-warning pull-right" ng-show="$ctrl.loggedIn" ng-click="$ctrl.logout()" type="submit">
                 <i class="fa fa-sign-out pull-left"></i> Logga ut
     </button>

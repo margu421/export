@@ -1,5 +1,5 @@
 angular.module('app').component('rules', {
-    templateUrl: '/play/rules.html',
+    templateUrl: '/admin/rules.html',
     bindings: {
     },
     controller: function (auth, $location) {

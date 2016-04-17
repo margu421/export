@@ -1,39 +1,71 @@
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <form>
-            <h4>Ny runda!<br>
-            <small>{{$ctrl.roundStartTime | date}}</small></h4>
+            <h4>Utomhus-lång-bane-golf-runda<br>
+            <small><strong>Datum: </strong>{{$ctrl.roundStartTime | date}}</small></h4>
             <div class="form-group">
-                <label for="roundType">Typ</label>
-                <select class="form-control" name="roundType" id="roundType" ng-model="$ctrl.round.type" ng-options="type for type in $ctrl.roundTypes">
+                <label for="roundType">Träna/Tävla?</label>
+                <select class="form-control" required name="roundType" id="roundType" ng-model="$ctrl.round.type" ng-options="type for type in $ctrl.roundTypes">
                 </select>
             </div>
             <div class="form-group">
                 <label for="course">Bana</label>
-                <select class="form-control" name="course" id="course " ng-model="$ctrl.round.course " ng-options="course.name for course in $ctrl.courses ">
+                <select class="form-control" required name="course" id="course " ng-model="$ctrl.round.course " ng-options="course.name for course in $ctrl.courses ">
                 </select>
             </div>
-            
 
-            <button type="submit" class="btn btn-warning">Slumpgenerator</button>
 
-            
-                <button class="btn btn-md btn-success pull-right" type="submit" ng-click="$ctrl.saveRound()">
-                    <i class="fa fa-play"></i> Spela   
-                </button>        
+
+            <!--<button class="btn btn-md btn-normal pull-right" ng-click="$ctrl.cancel()" type="submit">
+                 Avbryt
+                </button> -->
+            <table class="table table-striped">
+                
+                <tbody>
+                    <tr ng-repeat="member in $ctrl.members | orderBy: 'startNumber'">
+                        <td width="1%"><input name="member" type="checkbox" ng-model="member.playsThisRound"></td>
+                        <td>{{member.name}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <button class="btn btn-md btn-info pull-right" type="submit" ng-click="$ctrl.createStartingField()">
+                    Så där ja</button> <br><br>
+
         </form>
+
+
     </div>
     <div class="col-md-1">
     </div>
-    <div class="col-md-4">
-            <h4>Spelare<br>
-            <small>Välj vilka som ska vara med</small></h4>
-            
-            <ul class="list-group">
-                <li class="list-group-item"  ng-repeat="member in $ctrl.members" >
-                    <input name="player" type="checkbox" ng-model="isPlayer">
-                    <span class="badge">{{startNumber}}</span>{{member.name}}
-                </li>
-            </ul>
-            </div>
+    <div class="col-md-4" ng-show="$ctrl.startingFieldCreated">
+        <h4>Spelare<br>
+            <small>Dags att lotta startordning</small></h4>
+
+        <table class="table table-striped">
+            <thead>
+                <th>Spelare</th>
+                <th>Slumptal</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="player in $ctrl.players | orderBy: 'startNumber'">
+                    <td>{{player.name}}</td>
+                    <td><span class="badge">{{player.startNumber | number: 0}}</span></td>
+                </tr>
+            </tbody>
+
+        </table>
+        <button class="btn btn-md btn-primary pull-right" type="submit" ng-click="$ctrl.assignStartNumbers()">
+                    Lotta startordning</button> <br><br>
+        
+
+    </div>
+    <div class="col-md-3" ng-show="$ctrl.startNumbersAssigned">
+     <h4>Då så<br>
+            <small>Ser ut som allt är klart för att spela lite</small></h4>
+
+    <button class="btn btn-md btn-success pull-right" type="submit" ng-click="$ctrl.saveRound()">
+                    Utomhuslångbanegolf</button> <br><br>
+
+    </div>
 </div>

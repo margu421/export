@@ -1,0 +1,26 @@
+<h4>Administrera {{$ctrl.courses.getNumberOfCourses() | number}} u-l-g-b<br>
+            <small>Redigera, lägg till eller ta bort</small></h4>
+<button class="btn btn-sm btn-success pull-right" type="submit" ng-click="$ctrl.createCourse()"><i class="fa fa-pencil-square-o"></i> Lägg till ny...                        
+                            </button>
+<table class="table">
+    <thead>
+        <th></th>
+        <th>Klubb</th>
+        <th>Bana</th>
+        <th></th>
+        
+    </thead>
+    <tbody>
+        <tr  ng-repeat="course in $ctrl.courses | orderBy: 'name'">
+            <td><button class="btn btn-default glyphicon glyphicon-edit pull-right" ng-click="$ctrl.editCourse(course)"></button>
+            </td>
+            <td>{{course.clubName}}</td>
+            <td>{{course.name}}</td>
+            
+            <td><button class="btn btn-default glyphicon glyphicon-remove" style="color: red; cursor: point" ng-click="$ctrl.removeCourse(course)"></button>
+
+            </td>
+        </tr>
+    </tbody>
+
+</table>

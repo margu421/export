@@ -1,13 +1,14 @@
 <div class="row container-fluid">
     <div class="col-sm-9">
-
+    <h4>Medlem (du alltså {{$ctrl.member.name}})<br>
+            <small>Här kan du ändra diverse egenskaper</small></h4>
+           
         <form class="form-inline">
             <div class="input-group margin-bottom-lg">
                 <span class="input-group-addon">Namn</span>
                 <input class="form-control input-md" type="text" ng-model="$ctrl.member.name">
             </div>
             <br><br>
-
             <div class="col-md-3 input-group margin-bottom-lg" >
                 <span class="input-group-addon">Hcp...</span>
                 <input class="form-control input-md" type="text" ng-model="$ctrl.member.hcp">
@@ -52,10 +53,16 @@
     <div class="col-sm-1">
     </div>
     <div class="col-sm-2">
-        <button class="btn btn-md btn-warning pull-right" ng-show="$ctrl.loggedIn" ng-click="$ctrl.logout()" type="submit">
+        <button class="btn btn-md btn-warning pull-right" ng-click="$ctrl.logout()" type="submit">
                 <i class="fa fa-sign-out pull-left"></i> Logga ut
-    </button>
-
+        </button> 
+       <br><br><br>
+       <h4 class="pull-right">Administrera</h4>
+       <a href="#/admin/courses">
+            <button href="#/admin/courses" class="btn btn-sm btn-default pull-right" type="submit">
+                 <i class="fa fa-wrench"></i> Banor                        
+            </button>
+        </a>
 
     </div>
 

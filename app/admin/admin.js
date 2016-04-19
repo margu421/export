@@ -3,9 +3,6 @@ angular.module('app').component('admin', {
     bindings: {
     },
     controller: function ($location) {
-       this.setEditMode = function() {
-           
-       }
-        
+             
     }
 })

@@ -1,12 +1,14 @@
-<h4>Administration</h4>
+<h4><i class="fa fa-wrench" style="color: grey"></i> Administration</h4>
 
 <div class="row">
     <div class="col-md-3">
-        <button class="btn btn-default" type="submit">Banor</button>
-        <button class="btn btn-default" type="submit">Regler</button>
+        <a href="#/admin/courses">
+                <button class="btn btn-lg btn-default" type="submit" > 
+                Banor   
+                </button>
+            </a>            
     </div>
     <div class="col-md-9">
-        <course></course>
-        <rules ng-show="true"></rules>
+        <courses ng-show="$ctrl.editCourses"></courses>
     </div>
 </div>

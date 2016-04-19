@@ -3,7 +3,14 @@ var app = angular.module('app', ['ngRoute', 'firebase']);
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-            template: '<home></home>'
+            template: '<home rounds="$resolve.rounds"></home>',
+            resolve: {
+                rounds: function (fbRef, $firebaseArray) {
+                    return function () {
+                        return $firebaseArray(fbRef.getRoundsRef()).$loaded();
+                    }
+                }
+            }
         })
         .when('/login', {
             template: '<login current-auth="$resolve.currentAuth"></login>',
@@ -24,20 +31,17 @@ app.config(function ($routeProvider) {
                     })
                 },
                 members: function (fbRef, $firebaseArray) {
-                            return $firebaseArray(fbRef.getMembersRef()).$loaded();
-                    }
+                    return $firebaseArray(fbRef.getMembersRef()).$loaded();
+                }
             }
         })
         .when('/members', {
             template: '<members members="$resolve.members"></members>',
             resolve: {
                 members: function (fbRef, $firebaseArray) {
-                            return $firebaseArray(fbRef.getMembersRef()).$loaded();
-                    }
+                    return $firebaseArray(fbRef.getMembersRef()).$loaded();
+                }
             }
-        })
-        .when('/rules', {
-            template: '<rules></rules>'
         })
         .when('/member', {
             template: '<member current-auth="$resolve.currentAuth"></member>',
@@ -47,14 +51,43 @@ app.config(function ($routeProvider) {
                 }
             }
         })
-        .when('/admin', {
-            template: '<admin current-auth="$resolve.currentAuth"></admin>',
+        .when('/rounds', {
+            template: '<rounds rounds="$resolve.rounds" current-auth="$resolve.currentAuth"></rounds>',
             resolve: {
+                rounds: function (fbRef, $firebaseArray) {
+                    return $firebaseArray(fbRef.getRoundsRef()).$loaded();
+                },
                 currentAuth: function (auth) {
                     return auth.$requireAuth();
                 }
             }
         })
+
+        .when('/admin', {
+            template: '<admin current-auth="$resolve.currentAuth"></admin>',
+            resolve: {
+                currentAuth: function (auth) {
+                    return auth.$requireAuth();
+                }            
+            }
+        })
+        .when('/rules', {
+            template: '<rules></rules>'
+        })
+        .when('/admin/courses', {
+            template: '<courses current-auth="$resolve.currentAuth" courses="$resolve.courses"></courses>',
+            resolve: {
+                currentAuth: function (auth) {
+                    return auth.$requireAuth();
+                },
+                courses: function (fbRef, courseService) {
+                    var query = fbRef.getCoursesRef().orderByChild('clubName');
+                    return courseService(query).$loaded();
+                }
+            }  
+        })
+        
+
         .when('/leaderboard', {
             template: '<leaderboard></leaderboard>',
         })
@@ -66,4 +99,6 @@ app.config(function ($routeProvider) {
         auth.$onAuth(function (user) {
             $rootScope.loggedIn = !!user;
         });
+
+
     }]);

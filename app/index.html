@@ -28,23 +28,18 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <ul class="nav navbar-nav" ng-show="roundInPlay=true">
-                    <li><a href="#/leaderboard" ng-show="roundInPlay=true">
-                           <i class="fa fa-list-ol fa-3x" style="color: red"></i></a>
-                    </li>
-                    <li><a href="#/scorecard"><i class="fa fa-pencil-square-o fa-3x"></i>   </a></li>
+                <ul class="nav navbar-nav" >
 
                 </ul>
             </div>
             <div class="col-md-3">
                 <ul class="nav navbar-nav pull-right">
+                    <li><a href="#/rules"><i class="fa fa-book fa-3x"></i>   </a></li>
                     <li ng-hide="loggedIn">
                         <a href="#/login">
                             <button type="button" class="btn btn-default navbar-btn"> Logga in</button>
                         </a>
                     </li>
-                    <li><a href="#/rules"><i class="fa fa-book fa-3x"></i>   </a></li>
-                    <li ng-show="loggedIn"><a href="#/admin"><i class="fa fa-cog fa-3x"></i></a></li>
                     <li ng-show="loggedIn"><a href="#/member"><i class="fa fa-user fa-3x"></i></a></li>
 
                 </ul>
@@ -72,7 +67,14 @@
     <script src="/members/member.js"></script>
     <script src="/leaderboard/leaderboard.js"></script>
     <script src="/admin/admin.js"></script>
-    <script src="/admin/rules.js"></script>
+    <script src="/rules/rules.js"></script>
+    <script src="/rounds/rounds.js"></script>
+    <script src="/courses/courses.js"></script>
+    <script src="/courses/listCourses.js"></script>
+    <script src="/courses/editCourse.js"></script>
+    <script src="/courses/courseService.js"></script>
+
+
 
 
 </body>

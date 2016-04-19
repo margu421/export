@@ -4,6 +4,7 @@ angular.module('app').component('member', {
         currentAuth: '='
     },
     controller: function (fbRef, $firebaseObject, auth, $location) {
+       
        this.loggedIn = !!this.currentAuth;
         
        this.member = $firebaseObject(fbRef.getMembersRef().child(auth.$getAuth().uid));

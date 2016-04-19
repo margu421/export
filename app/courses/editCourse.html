@@ -1,0 +1,54 @@
+<h4>Du redigerar {{course.name}}<br>
+    <small> </small></h4>
+<form class="">
+    <div class="input-group margin-bottom-lg">
+        <span class="input-group-addon">Klubbnamn</span>
+        <input class="form-control input-md" placeholder="golfklubbens namn alltså" type="text" ng-model="$ctrl.course.clubName">
+    </div>
+    <br>
+
+    <div class="input-group margin-bottom-lg">
+        <span class="input-group-addon">Namn</span>
+        <input class="form-control input-md" type="text" placeholder="själva banans namn" ng-model="$ctrl.course.name">
+    </div>
+    <br>
+    <div class="input-group col-md-12">
+        <strong>Beskrivning</strong>
+        <textarea placeholder="Lägg till lite information om banan..." class="form-control textarea" rows="6" ng-model="$ctrl.course.desc"></textarea>
+    </div>
+    <br>
+    
+    <div class="input-group col-md-12">
+        <strong>Scorekort</strong>
+        <table class="table">
+    <thead>
+        <th>Hål #</th>
+        <th>Par</th>
+        <th>Längd</th>
+        <th>HCP</th>
+        
+    </thead>
+    <tbody>
+        <tr>
+            <!--<td ng-model="">1</td>-->
+            <!--<td ng-model=""></td>-->
+            <!--<td ng-model=""></td>-->
+            <!--<td ng-model=""></td>-->
+        </tr>
+    </tbody>
+
+</table>
+    </div>
+    <br>
+</form>
+
+<div class="input-group pull-right">
+    <div class="pull-right">
+        <button class="btn btn-md btn-normal" ng-click="$ctrl.cancel()" type="submit">
+                <i class="fa fa pull-left"></i> Avbryt
+                </button>&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
+                <i class="fa fa-save fa-2x pull-left"></i> Spara
+                </button>
+    </div>
+</div>

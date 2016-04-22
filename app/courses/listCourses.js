@@ -5,15 +5,15 @@ angular.module('app').component('listCourses', {
         selectCourse: "&"
     },
     controller: function (auth, $location) {
-        
-        
-        this.editCourse = function (course) {
+             
+        this.edit = function (course) {
+            console.log("edit: " + course.name);
             this.selectCourse({course: course})
             
             
         }
         
-        this.removeCourse = function(course) {
+        this.remove = function(course) {
             this.courses.$remove(course)
         }
         

@@ -1,69 +1,67 @@
-<div class="row container-fluid">
-    <div class="col-sm-9">
-    <h4>Medlem (du alltså {{$ctrl.member.name}})<br>
+<div class="row">
+    <form class="col s9">
+        <h4>Medlem (du alltså {{$ctrl.member.name}})<br>
             <small>Här kan du ändra diverse egenskaper</small></h4>
-           
-        <form class="form-inline">
-            <div class="input-group margin-bottom-lg">
-                <span class="input-group-addon">Namn</span>
-                <input class="form-control input-md" type="text" ng-model="$ctrl.member.name">
+        <div class="row">
+            <div class="input-field col s12">
+                Medlem
+                <input placeholder="Tilltalsnamn" id="name" type="text" ng-model="$ctrl.member.name">
+                <!--<label for="name">Tilltalsnamn</label>-->
             </div>
-            <br><br>
-            <div class="col-md-3 input-group margin-bottom-lg" >
-                <span class="input-group-addon">Hcp...</span>
-                <input class="form-control input-md" type="text" ng-model="$ctrl.member.hcp">
-            </div>
-            <div class="col-md-3 input-group margin-bottom-lg" >
-                <span class="input-group-addon">Längd</span>
-                <input class="form-control input-md" type="text" ng-model="$ctrl.member.height">
-            </div>
-            <div class="col-md-3 input-group margin-bottom-lg" >
-                <span class="input-group-addon">Vikt</span>
-                <input class="form-control input-md" type="text" ng-model="$ctrl.member.weight">
-            </div>    
-                <br><br>
 
-            <div class="input-group col-md-9">
-                <strong>Beskrivning</strong><small> av {{$ctrl.member.name}}</small>
+            <div class="input-field col s4">
+                HCP
+                <input id="hcp" placeholder="HCP" class="validate" type="text">
+                <!--<label for="hcp">HCP</label>-->
 
-                <textarea class="form-control textarea"  rows="6" ng-model="$ctrl.member.desc"></textarea>
             </div>
-            <br>
-            <div class="input-group">
-                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-                <input type="checkbox" ng-model="$ctrl.member.uti" id="switch-1" class="mdl-switch__input" checked>
-                <span class="mdl-switch__label"> Nykter / Onykter</span>
-                 </label>
+
+            <div class="input-field col s4">
+                Längd
+                <input id="height" class="validate" placeholder="Längd" type="text" ng-model="$ctrl.member.height">
+                <!--<label for="height">Längd</label>-->
+
             </div>
-             <br><br>   
+            <div class="input-field col s4">
+                Längd
+                <input id="weight" class="validate" placeholder="Vikt" type="text" ng-model="$ctrl.member.weight">
+                <!--<label for="weight">Vikt</label>-->
+            </div>
+            <div class="input-field col s12">
+                Beskrivning
+                <textarea id="desc" class="materialize-textarea" rows="10" ng-model="$ctrl.member.desc"></textarea>
+                <!--<label for="desc">Beskrivning</label>-->
+            </div>
+
             <div class="input-group col-md-9">
                 <div class="pull-right">
-                <button class="btn btn-md btn-normal" ng-click="$ctrl.cancel()" type="submit">
+                    <button class="btn btn-md btn-normal" ng-click="$ctrl.cancel()" type="submit">
                 <i class="fa fa pull-left"></i> Avbryt
-                </button>&nbsp;&nbsp;&nbsp; 
-                <button class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
+                </button>
+                    <button class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
                 <i class="fa fa-save fa-2x pull-left"></i> Spara
                 </button>
                 </div>
             </div>
+        </div>
+    </form>
 
-        </form>
+    <form class="col s3 pull right">
+        <br>
+        <div class="input-group col-md-9">
 
-    </div>
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-2">
-        <button class="btn btn-md btn-warning pull-right" ng-click="$ctrl.logout()" type="submit">
+            <button class="btn btn-sm btn-warning pull-right" ng-click="$ctrl.logout()" type="submit">
                 <i class="fa fa-sign-out pull-left"></i> Logga ut
-        </button> 
-       <br><br><br>
-       <h4 class="pull-right">Administrera</h4>
-       <a href="#/admin/courses">
-            <button href="#/admin/courses" class="btn btn-sm btn-default pull-right" type="submit">
-                 <i class="fa fa-wrench"></i> Banor                        
-            </button>
-        </a>
+        </button>
+        </div>
+        <br><br>
+        <div class="input-group col-md-9">
 
-    </div>
+            <a href="#/admin/courses">
+                <button href="#/admin/courses" class="btn btn-sm btn-default pull-right" type="submit">
+          <i class="fa fa-wrench"></i> Banor                        
+        </button></a>
+        </div>
+    </form>
 
 </div>

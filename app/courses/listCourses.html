@@ -1,26 +1,35 @@
+<div class="row">
 <h4>Administrera {{$ctrl.courses.getNumberOfCourses() | number}} u-l-g-b<br>
             <small>Redigera, lägg till eller ta bort</small></h4>
-<button class="btn btn-sm btn-success pull-right" type="submit" ng-click="$ctrl.createCourse()"><i class="fa fa-pencil-square-o"></i> Lägg till ny...                        
-                            </button>
+</div>
+<div class="row">
+
+<form class="form">
 <table class="table">
     <thead>
-        <th></th>
+        <th>Ändra</th>
         <th>Klubb</th>
         <th>Bana</th>
-        <th></th>
-        
+        <th>Ta bort</th>
+
     </thead>
     <tbody>
-        <tr  ng-repeat="course in $ctrl.courses | orderBy: 'name'">
-            <td><button class="btn btn-default glyphicon glyphicon-edit pull-right" ng-click="$ctrl.editCourse(course)"></button>
+        <tr ng-repeat="course in $ctrl.courses">
+            <td>
+                <a class="waves-effect waves-light btn-floating blue" ng-click="$ctrl.edit(course)">
+                    <i class="material-icons">mode_edit</i>
+                </a>
             </td>
             <td>{{course.clubName}}</td>
             <td>{{course.name}}</td>
-            
-            <td><button class="btn btn-default glyphicon glyphicon-remove" style="color: red; cursor: point" ng-click="$ctrl.removeCourse(course)"></button>
-
+            <td>
+                <a class="waves-effect waves-light btn-floating red" ng-click="$ctrl.remove(course)">
+                    <i class="material-icons right">delete</i>
+                </a>
             </td>
         </tr>
     </tbody>
 
 </table>
+</form>
+</div>

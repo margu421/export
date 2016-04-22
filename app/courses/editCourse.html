@@ -1,54 +1,86 @@
-<h4>Du redigerar {{course.name}}<br>
-    <small> </small></h4>
-<form class="">
-    <div class="input-group margin-bottom-lg">
-        <span class="input-group-addon">Klubbnamn</span>
-        <input class="form-control input-md" placeholder="golfklubbens namn alltså" type="text" ng-model="$ctrl.course.clubName">
+<div class="row">
+    <div ng-show="$ctrl.editing">
+        <a class="waves-effect waves-light btn-floating left blue">
+            <i class="material-icons">mode_edit</i>
+        </a>
+        <h4> &nbsp; {{$ctrl.name}} på {{$ctrl.clubName}}</h4>
     </div>
-    <br>
+    <div ng-show="!$ctrl.editing">
+        <a class="waves-effect waves-light btn-floating btn-large right green" ng-click="$ctrl.create()">
+            <i class="material-icons">add</i>
+        </a>
+        <h4>Lägg till ny bana...<br><small>Redigera, lägg till eller ta bort</small></h4>
+    </div>
+</div>
+<div class="row">
+    <form class="form">
+        <div class="input-field col s12">
+            Klubb
+            <input class="validate" ng-required="true" placeholder="golfklubb" type="text" ng-model="$ctrl.clubName">
+        </div>
+        <br>
+        <div class="input-field col s12">
+            Bana
+            <input class="validate" type="text" ng-required="true" placeholder="bana" ng-model="$ctrl.name">
+        </div>
+        <br>
 
-    <div class="input-group margin-bottom-lg">
-        <span class="input-group-addon">Namn</span>
-        <input class="form-control input-md" type="text" placeholder="själva banans namn" ng-model="$ctrl.course.name">
-    </div>
-    <br>
-    <div class="input-group col-md-12">
-        <strong>Beskrivning</strong>
-        <textarea placeholder="Lägg till lite information om banan..." class="form-control textarea" rows="6" ng-model="$ctrl.course.desc"></textarea>
-    </div>
-    <br>
-    
-    <div class="input-group col-md-12">
-        <strong>Scorekort</strong>
-        <table class="table">
-    <thead>
-        <th>Hål #</th>
-        <th>Par</th>
-        <th>Längd</th>
-        <th>HCP</th>
-        
-    </thead>
-    <tbody>
-        <tr>
-            <!--<td ng-model="">1</td>-->
-            <!--<td ng-model=""></td>-->
-            <!--<td ng-model=""></td>-->
-            <!--<td ng-model=""></td>-->
-        </tr>
-    </tbody>
+        <div class="input-field col s12">
+            Webadress
+            <input class="form-control input-md" type="text" ng-required="true" placeholder="webadress" ng-model="$ctrl.link">
+        </div>
+        <br><br><br>
 
-</table>
+        <div class="input-field col s12">
+            <h5>Scorekort</h5>
+            <table class="table">
+                <thead>
+                    <th data-field="holeNumber">Hål #</th>
+                    <th data-field="par">Par</th>
+                    <th data-field="length">Längd</th>
+                    <th data-field="hcp">HCP</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="hole in $ctrl.scoreCard.holes">
+                        <td width="10%" ng-model="hole.holeNumber"><strong>{{hole.holeNumber}}</strong></td>
+                        <td width="20%">
+                            <input class="form-control input-md" type="number" ng-model="hole.par">
+                        </td>
+                        <td width="40%">
+                            <input class="form-control input-md" type="number" ng-model="hole.length">
+                        </td>
+                        <td width="30%">
+                            <input class="form-control input-md" type="number" ng-model="hole.hcp">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Totalt</td>
+                        <td>{{$ctrl.scoreCard.totalPar}}</td>
+                        <td>{{$ctrl.scoreCard.totalLength}}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+    <div class="input-group col s12">
+        <h5>Beskrivning</h5>
+        <textarea ng-required="true" placeholder="Lägg till lite information om banan..." class="materialize-textarea" ng-model="$ctrl.desc"></textarea>
     </div>
     <br>
-</form>
+</div>
+<div class="row">
+    <div class="input-group pull-right">
+        <div class="pull-right">
+            <button class="btn btn-md btn-normal" ng-click="$ctrl.cancel()" type="submit">
+                <i class="fa fa pull-left"></i> Avbryt</button>
+            <button ng-show="$ctrl.editing" class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
+                <i class="fa fa-save fa-2x pull-left"></i> Spara</button>
+            <button ng-show="!$ctrl.editing" class="btn btn-md btn-warning" ng-click="$ctrl.create()" type="submit">
+                <i class="fa fa-save fa-2x pull-left"></i> Lägg till
+            </button>
 
-<div class="input-group pull-right">
-    <div class="pull-right">
-        <button class="btn btn-md btn-normal" ng-click="$ctrl.cancel()" type="submit">
-                <i class="fa fa pull-left"></i> Avbryt
-                </button>&nbsp;&nbsp;&nbsp;
-        <button class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
-                <i class="fa fa-save fa-2x pull-left"></i> Spara
-                </button>
+        </div>
     </div>
 </div>

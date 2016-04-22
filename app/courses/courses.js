@@ -5,19 +5,24 @@ angular.module('app').component('courses', {
         selectCourse: "&"
     },
     controller: function (auth, $location) {
-        
-        this.showEditForm = false;
-        
+
+
         //fortsätt här
-        
-        this.editCourse = function (course) {
-            this.selectCourse({course: course})
-            
-            
+
+        this.edit = function (course) {
+            this.editedCourse = course;
+
+
+        }
+
+        this.createCourse = function (courseData) {
+            this.courses.$add(courseData);
+
         }
         
-        this.createCourse = function () {
-            
+        this.updateCourse = function () {
+            this.courses.$save(this.editedCourse);
+
         }
 
 

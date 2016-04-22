@@ -1,12 +1,13 @@
 <div class="row">
-    <div class="col-xs-5">
-
-        <list-courses course-data="$ctrl.courses"></list-courses>
+    <div class="col s6">
+        <list-courses course-data="$ctrl.courses" select-course="$ctrl.edit(course)"></list-courses>
     </div>
-
-    <div class="col-xs-1">
+    <div class="col s1">
+        &nbsp;
     </div>
-    <div class="col-xs-6">
-        <edit-course ng-show="$ctrl.showEditForm"></edit-course>
+    <div class="col s5">
+        <edit-course create-new-course="$ctrl.createCourse(courseData)"
+            edited-course="$ctrl.editedCourse"
+            update-course="$ctrl.updateCourse()"></edit-course>
     </div>
 </div>

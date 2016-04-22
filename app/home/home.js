@@ -4,8 +4,7 @@ angular.module('app').component('home', {
         rounds: "="
     },
     controller: function (fbRef, $firebaseArray) {
-
-        console.log(this.roundInPlay);
+        
         this.rounds = $firebaseArray(fbRef.getRoundsRef());
 
         this.$onInit = this.rounds.$loaded(function (rounds) {
@@ -15,6 +14,10 @@ angular.module('app').component('home', {
                     console.log(this.roundInPlay);
                     return;
                 }
+                else {
+                    this.roundInPlay = false;
+
+                }
             }
 
         }, function (error) {
@@ -22,7 +25,6 @@ angular.module('app').component('home', {
         })
 
 
-        this.roundInPlay = null;
 
 
     }

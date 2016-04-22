@@ -32,6 +32,9 @@ app.config(function ($routeProvider) {
                 },
                 members: function (fbRef, $firebaseArray) {
                     return $firebaseArray(fbRef.getMembersRef()).$loaded();
+                },
+                currentAuth: function (auth) {
+                    return auth.$requireAuth();
                 }
             }
         })
@@ -55,7 +58,8 @@ app.config(function ($routeProvider) {
             template: '<rounds rounds="$resolve.rounds" current-auth="$resolve.currentAuth"></rounds>',
             resolve: {
                 rounds: function (fbRef, $firebaseArray) {
-                    return $firebaseArray(fbRef.getRoundsRef()).$loaded();
+                    var query = fbRef.getRoundsRef().orderByChild('startTime');
+                        return $firebaseArray(fbRef.getRoundsRef(query)).$loaded();
                 },
                 currentAuth: function (auth) {
                     return auth.$requireAuth();
@@ -86,8 +90,6 @@ app.config(function ($routeProvider) {
                 }
             }  
         })
-        
-
         .when('/leaderboard', {
             template: '<leaderboard></leaderboard>',
         })

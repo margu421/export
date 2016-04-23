@@ -1,7 +1,6 @@
 angular.module('app').component('editCourse', {
     templateUrl: '/courses/editCourse.html',
     bindings: {
-        // courses: "=",
         updateCourse: '&',
         createNewCourse: "&",
         selectCourse: "&",
@@ -29,15 +28,11 @@ angular.module('app').component('editCourse', {
         }
 
         this.setDefaults = function () {
-            this.clubName = "",
+                this.clubName = "",
                 this.name = "",
                 this.link = "http://",
                 this.desc = ""
-            this.scoreCard = {
-                holes: generateScoreCardHoles(),
-                totalPar: 0,
-                totalLength: 0
-            }
+                this.scoreCard = generateScoreCardHoles();
         }
 
         this.setDefaults();
@@ -51,13 +46,19 @@ angular.module('app').component('editCourse', {
                 , scoreCard: this.scoreCard
             }
             this.setDefaults();
+            this.creating = false;
             //save data
             this.createNewCourse({ courseData: this.courseData });
 
         }
+        this.setCreating = function () {
+            this.creating = true;
+        }
+        
         this.cancel = function () {
             this.setDefaults();
             this.editing = false;
+            this.creating = false;
         }
 
         this.save = function (course) {

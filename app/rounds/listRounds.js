@@ -1,11 +1,19 @@
-angular.module('app').component('rounds', {
-    templateUrl: '/rounds/rounds.html',
+angular.module('app').component('listRounds', {
+    templateUrl: '/rounds/listRounds.html',
     bindings: {
-        rounds: '='
+        rounds: '=',
+        selectRound: "&"
     },
-    controller: function (fbRef, $firebaseArray) {
+    controller: function (fbRef, roundService) {
 
-        this.rounds = $firebaseArray(fbRef.getRoundsRef());
+        this.rounds = roundService(fbRef.getRoundsRef());
+        
+        this.ongoingRound = this.rounds.getOngoingRound();
+        
+        this.showLeaderBoard = function (round) {
+            console.log("leaderboard for: " + round.$id);
+            this.selectRound({round: round}); 
+        }
                
         this.endRound = function ($id) {
             console.log($id);
@@ -24,9 +32,6 @@ angular.module('app').component('rounds', {
                 "endTime": null
             });
         }
-        
-
     }
-
 }
 )

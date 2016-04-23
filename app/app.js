@@ -5,10 +5,9 @@ app.config(function ($routeProvider) {
         .when('/', {
             template: '<home rounds="$resolve.rounds"></home>',
             resolve: {
-                rounds: function (fbRef, $firebaseArray) {
-                    return function () {
-                        return $firebaseArray(fbRef.getRoundsRef()).$loaded();
-                    }
+                rounds: function (fbRef, roundService) {
+                    var query = fbRef.getRoundsRef().orderByChild('ongoing');
+                    return roundService(query).$loaded();
                 }
             }
         })
@@ -21,8 +20,8 @@ app.config(function ($routeProvider) {
                 }
             }
         })
-        .when('/play', {
-            template: '<play courses="$resolve.courses" members="$resolve.members"></play>',
+        .when('/round', {
+            template: '<round courses="$resolve.courses" members="$resolve.members"></round>',
             resolve: {
                 courses: function (fbRef, $firebaseArray, auth) {
                     return auth.$requireAuth().then(function () {
@@ -54,12 +53,12 @@ app.config(function ($routeProvider) {
                 }
             }
         })
-        .when('/rounds', {
-            template: '<rounds rounds="$resolve.rounds" current-auth="$resolve.currentAuth"></rounds>',
+        .when('/listRounds', {
+            template: '<list-rounds rounds="$resolve.rounds" current-auth="$resolve.currentAuth"></list-rounds>',
             resolve: {
-                rounds: function (fbRef, $firebaseArray) {
-                    var query = fbRef.getRoundsRef().orderByChild('startTime');
-                        return $firebaseArray(fbRef.getRoundsRef(query)).$loaded();
+                rounds: function (fbRef, roundService) {
+                    var query = fbRef.getRoundsRef().orderByChild('date');
+                        return roundService(fbRef.getRoundsRef(query)).$loaded();
                 },
                 currentAuth: function (auth) {
                     return auth.$requireAuth();
@@ -91,7 +90,13 @@ app.config(function ($routeProvider) {
             }  
         })
         .when('/leaderboard', {
-            template: '<leaderboard></leaderboard>',
+            template: '<leaderboard rounds="$resolve.rounds"></leaderboard>',
+            resolve: {
+                rounds: function (fbRef, roundService) {
+                    var query = fbRef.getRoundsRef().orderByChild('start');
+                    return roundService(query).$loaded();
+                }
+            }
         })
         .otherwise('/')
 })

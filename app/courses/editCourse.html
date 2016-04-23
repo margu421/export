@@ -6,13 +6,28 @@
         <h4> &nbsp; {{$ctrl.name}} på {{$ctrl.clubName}}</h4>
     </div>
     <div ng-show="!$ctrl.editing">
-        <a class="waves-effect waves-light btn-floating btn-large right green" ng-click="$ctrl.create()">
+        <a class="waves-effect waves-light btn-floating btn-large right green" ng-click="$ctrl.setCreating()">
             <i class="material-icons">add</i>
         </a>
         <h4>Lägg till ny bana...<br><small>Redigera, lägg till eller ta bort</small></h4>
     </div>
 </div>
 <div class="row">
+    <div class="input-group pull-right">
+        <div class="right">
+            <button ng-show="$ctrl.editing || $ctrl.creating" class="btn grey" ng-click="$ctrl.cancel()" type="submit">
+                <i class="fa fa pull-left"></i> Avbryt</button>
+            <button ng-show="$ctrl.editing" class="btn blue" ng-click="$ctrl.save()" type="submit">
+                <i class="fa fa-save fa-2x pull-left"></i> Spara</button>
+            <button ng-show="$ctrl.creating && $ctrl.clubName" class="btn blue" ng-click="$ctrl.create()" type="submit">
+                <i class="fa fa-save fa-2x pull-left"></i> Spara
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-show="$ctrl.editing || $ctrl.creating">
     <form class="form">
         <div class="input-field col s12">
             Klubb
@@ -44,13 +59,13 @@
                     <tr ng-repeat="hole in $ctrl.scoreCard.holes">
                         <td width="10%" ng-model="hole.holeNumber"><strong>{{hole.holeNumber}}</strong></td>
                         <td width="20%">
-                            <input class="form-control input-md" type="number" ng-model="hole.par">
+                            <input class="form-control input-md" type="number" min="3" max="6" ng-model="hole.par">
                         </td>
                         <td width="40%">
                             <input class="form-control input-md" type="number" ng-model="hole.length">
                         </td>
                         <td width="30%">
-                            <input class="form-control input-md" type="number" ng-model="hole.hcp">
+                            <input class="form-control input-md" type="number" min="1" max="18" ng-model="hole.hcp">
                         </td>
                     </tr>
                     <tr>
@@ -69,18 +84,4 @@
         <textarea ng-required="true" placeholder="Lägg till lite information om banan..." class="materialize-textarea" ng-model="$ctrl.desc"></textarea>
     </div>
     <br>
-</div>
-<div class="row">
-    <div class="input-group pull-right">
-        <div class="pull-right">
-            <button class="btn btn-md btn-normal" ng-click="$ctrl.cancel()" type="submit">
-                <i class="fa fa pull-left"></i> Avbryt</button>
-            <button ng-show="$ctrl.editing" class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
-                <i class="fa fa-save fa-2x pull-left"></i> Spara</button>
-            <button ng-show="!$ctrl.editing" class="btn btn-md btn-warning" ng-click="$ctrl.create()" type="submit">
-                <i class="fa fa-save fa-2x pull-left"></i> Lägg till
-            </button>
-
-        </div>
-    </div>
 </div>

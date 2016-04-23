@@ -1,29 +1,61 @@
-<div class="android-content">
-    <div class="home-section mdl-typography--text-center">
+<div class="row">
+    <div class="logo-title center">
+        <h1>export open.</h1>
+        <a ng-hide="$ctrl.rounds.getOngoingRound()" href="#/round" class="waves-effect blue waves-light btn-floating btn-large" ng-click="$ctrl.logout()"><i class="material-icons left">play_arrow</i></a>
+        
+    </div>
+</div>
+<div class="row">
 
-        <div class="logo-title android-slogan">
-            export open.
-            <a href="#/play" ng-hide="$ctrl.roundInPlay">
-                <button  class="btn" type="submit">
-                <i class="fa fa-play fa-2x"></i>
-                </button>
-            </a>
-            <a href="#/leaderboard" ng-hide="$ctrl.roundInPlay">
-                <button  class="btn" type="submit">
-                <i class="fa fa-list-ol fa-2x"></i>   
-                </button>
-            </a>
-            <a href="#/promille">
-                <button  class="btn" type="submit">
-                <i class="fa fa-line-chart fa-3x"></i>   
-                </button>
-            </a>
-            
+    <div ng-show="$ctrl.rounds.getOngoingRound()" class="center col s12 push-m2 m8">
+        <div>
+            <div class="preloader-wrapper active">
+                <div class="spinner-layer spinner-red-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <a href="#/leaderboard" ng-hide=""><i class="material-icons medium">format_list_numbered</i></a>
         </div>
+        <h6 style="color: red;">Spel pågår!</h6>
 
-        <div class="logo-font android-sub-slogan">8 <a href="#/members">spelare.</a>    
-        1 utomhus-lång-bane-golf-tävling.</div>
-    
-    <div class="logo-font android-sub-slogan"><a href="#/rounds">Historik.</a></div>
+    </div>
+
+
+    <div class="row center">
+        <div class="col s12 push-m2 m8">
+            <div class="card green">
+                <div class="card-content white-text">
+                    <span class="card-title">Utomhuslånggolfstävlingen med stort U.</span>
+                    <p>81 hål om året. 8 spelare. 1 tävling. 7 förlorare. 1 gammal keps. 2 varma vantar. Fårfioler. Sura släntar. Avspärrning. Avsmalning. Enputtar. Tvåputtar. Treputtar. Borås. Ute i tid. Stanare. Diskoteka. 1 segrare. 1 kavaj.
+                    </p>
+                </div>
+            </div>
+            <div class="card col s4">
+                <a href="#/leaderboard" ng-hide=""><i href="#/leaderboard" class="material-icons medium">format_list_numbered</i></a>
+                <div class="card-action">
+                    Resultat
+                </div>
+            </div>
+            <div class="card col s4">
+                <a href="#/promille" ng-hide=""><i class="material-icons medium">insert_chart</i></a>
+                <div class="card-action">
+                    Promille
+                </div>
+            </div>
+            <div class="card col s4">
+                <a href="#/listRounds" ng-hide=""><i class="material-icons medium">history</i></a>
+                <div class="card-action">
+                    Historik
+                </div>
+            </div>
+        </div>
     </div>
 </div>

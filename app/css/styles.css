@@ -10,15 +10,40 @@ body {
 .pointable {
     cursor: pointer;
 }
+.center {
+    text-align: center;
+}
 
 .logo-title {
     font-family: 'Love Ya Like A Sister';
-    font-size: 60px;
+    font-size: 3em;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
-    line-height: 26.4px;
     color: #42A948;
+    line-height: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+#toast-container {
+  top: auto;
+  right: auto;
+  bottom: 10%;
+  left:50%; 
+}
+
+.logo-title-small {
+
+    font-family: 'Love Ya Like A Sister';
+    font-size: 1.2em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    color: white;
+    line-height: 1.5em;
+    align-self: center;
+
 
 }
 

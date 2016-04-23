@@ -1,67 +1,44 @@
 <div class="row">
     <form class="col s9">
-        <h4>Medlem (du alltså {{$ctrl.member.name}})<br>
-            <small>Här kan du ändra diverse egenskaper</small></h4>
+        <h4>Medlem <small>(du alltså {{$ctrl.member.name}})</small></h4>
         <div class="row">
             <div class="input-field col s12">
                 Medlem
                 <input placeholder="Tilltalsnamn" id="name" type="text" ng-model="$ctrl.member.name">
                 <!--<label for="name">Tilltalsnamn</label>-->
             </div>
-
             <div class="input-field col s4">
-                HCP
-                <input id="hcp" placeholder="HCP" class="validate" type="text">
+                <h6>HCP</h6>
+                <input id="hcp" placeholder="HCP" class="validate" type="text" ng-model="$ctrl.member.hcp">
                 <!--<label for="hcp">HCP</label>-->
-
             </div>
-
             <div class="input-field col s4">
-                Längd
+                <h6>Längd</h6>
                 <input id="height" class="validate" placeholder="Längd" type="text" ng-model="$ctrl.member.height">
                 <!--<label for="height">Längd</label>-->
-
             </div>
             <div class="input-field col s4">
-                Längd
+                <h6>Vikt</h6>
                 <input id="weight" class="validate" placeholder="Vikt" type="text" ng-model="$ctrl.member.weight">
                 <!--<label for="weight">Vikt</label>-->
             </div>
             <div class="input-field col s12">
-                Beskrivning
-                <textarea id="desc" class="materialize-textarea" rows="10" ng-model="$ctrl.member.desc"></textarea>
+                <h6>Beskrivning</h6>
+                <textarea id="desc" class="materialize-textarea" ng-model="$ctrl.member.desc"></textarea>
                 <!--<label for="desc">Beskrivning</label>-->
             </div>
 
-            <div class="input-group col-md-9">
-                <div class="pull-right">
-                    <button class="btn btn-md btn-normal" ng-click="$ctrl.cancel()" type="submit">
-                <i class="fa fa pull-left"></i> Avbryt
-                </button>
-                    <button class="btn btn-md btn-success" ng-click="$ctrl.save()" type="submit">
-                <i class="fa fa-save fa-2x pull-left"></i> Spara
-                </button>
-                </div>
+            <div>
+                <a class="waves-effect left grey waves-light btn" ng-click="$ctrl.cancel()">Avbryt</a>
+                    <a class="waves-effect right blue waves-light btn" ng-click="$ctrl.save()">Spara</a>
             </div>
         </div>
     </form>
 
-    <form class="col s3 pull right">
-        <br>
-        <div class="input-group col-md-9">
-
-            <button class="btn btn-sm btn-warning pull-right" ng-click="$ctrl.logout()" type="submit">
-                <i class="fa fa-sign-out pull-left"></i> Logga ut
-        </button>
-        </div>
+    <div class="col s3">
+        <a class="waves-effect right waves-light orange btn" ng-click="$ctrl.logout()"><i class="material-icons"></i>Logga ut</a>
         <br><br>
-        <div class="input-group col-md-9">
 
-            <a href="#/admin/courses">
-                <button href="#/admin/courses" class="btn btn-sm btn-default pull-right" type="submit">
-          <i class="fa fa-wrench"></i> Banor                        
-        </button></a>
-        </div>
-    </form>
-
+        <a href="#/admin/courses" class="waves-effect right blue waves-light btn"><i class="material-icons left">golf_course</i>Banor</a>
+    </div>
 </div>

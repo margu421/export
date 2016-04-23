@@ -8,9 +8,7 @@ angular.module('app').component('listCourses', {
              
         this.edit = function (course) {
             console.log("edit: " + course.name);
-            this.selectCourse({course: course})
-            
-            
+            this.selectCourse({course: course}) 
         }
         
         this.remove = function(course) {

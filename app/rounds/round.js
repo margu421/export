@@ -1,5 +1,5 @@
-angular.module('app').component('play', {
-    templateUrl: '/play/play.html',
+angular.module('app').component('round', {
+    templateUrl: '/rounds/round.html',
     bindings: {
         courses: '=',
         members: '='
@@ -35,33 +35,30 @@ angular.module('app').component('play', {
                 // a must be equal to b
                 return 0;
             });
-
+            
+            //Spelare delade in i bollar
             // for (var i = 1; i <= this.players.length; i++) {   
             //         for(var j=0 )   
             //         this.players[i].flight = 1;
             //     }
             // }
-            
 
             this.startNumbersAssigned = true;
         }
-
-        this.createStartingField = function () {
-            this.players = [];
-            for (var i = 0; i < this.members.length; i++) {
-                if (this.members[i].playsThisRound) {
-                    this.players.push({ name: this.members[i].name, id: this.members[i].$id });
-                }
-
-            }
-            this.startingFieldCreated = true;
+        
+        this.addToStartingField = function (player) {
+            this.players.push({ name: player.name, id: player.$id, score: this.course.scoreCard});
         }
-
-
+        
+        this.clearStartingField = function () {
+            this.players = [];
+        }
+           
         this.saveRound = function () {
 
             this.rounds.$add({
-                startTime: this.roundStartTime.toJSON(),
+                date: this.roundStartTime.toLocaleDateString(),
+                startTime: this.roundStartTime.toLocaleTimeString(),
                 type: this.type,
                 course: this.course,
                 players: this.players,
@@ -69,9 +66,7 @@ angular.module('app').component('play', {
                 ongoing: true,
                 endTime: null
             });
-            $location.path('/scorecard');
-
-
+            $location.path('/rounds');
         }
 
         this.cancel = function () {

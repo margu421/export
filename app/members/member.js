@@ -11,16 +11,17 @@ angular.module('app').component('member', {
        
        this.save = function () {
            this.member.$save();
+           Materialize.toast('Sparat!', 3000, 'rounded');
        }
        
        this.cancel = function () {
-           $location.path('/home');
+           $location.path('/');
        }
        
         this.logout = function () {
             auth.$unauth();
-            console.log("Utloggad");
-            $location.path('/home');
+            Materialize.toast('Utloggad!', 3000, 'rounded');
+            $location.path('/');
         }
         
         var authData = auth.$getAuth();

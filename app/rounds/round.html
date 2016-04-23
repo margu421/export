@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col m6">
+        <form class="col s12">
+            <h5>Ny utomhus-långgolf-bane-runda<br>
+            <small><strong>Dagens datum: </strong>{{$ctrl.roundStartTime | date}}</small></h5>
+            <!--Rundtyp-->
+            <div class="input-field">
+                <div class="switch">
+                    <label>{{$ctrl.roundTypes[1]}}
+                <input type="checkbox" ng-model="$ctrl.round.type">
+                <span class="lever"></span>
+                {{$ctrl.roundTypes[0]}}
+                </label>
+                </div>
+            </div>
+            <br>
+            <!--Banor-->
+            <div class="input-field col s12">
+                <h5>Bana</h5>
+                <select class="browser-default col s8" ng-model="$ctrl.course" ng-options="course.clubName + ' - ' + course.name for course in $ctrl.courses"></select>
+            </div>
+            <!--Medlemmar-->
+            <div class="input-field col s8" ng-show="$ctrl.course"> 
+                <h5>Medlemmar</h5>
+                <ul class="collection">
+                    <li ng-hide="hideMember" style="cursor: pointer;" ng-click="$ctrl.addToStartingField(member)" ng-repeat="member in $ctrl.members" class="collection-item">{{member.name}}</li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <div class="col m6" ng-show="$ctrl.players.length>0">
+        <h5>Spelare<br>
+            <small>Lotta startnummer</small></h5>
+        <ul class="collection">
+            <li ng-repeat="player in $ctrl.players" class="collection-item green lighten-5">{{player.name}}
+                <span class="badge">{{player.startNumber | number: 0}}</span>
+            </li>
+        </ul>
+        <br>
+        <a class="waves-effect waves-light grey btn left" ng-click="$ctrl.clearStartingField()">
+            <i class="material-icons left">clear</i>Rensa</a>
+
+        <a class="waves-effect waves-light btn blue right" ng-click="$ctrl.assignStartNumbers()">
+            <i class="material-icons right">autorenew</i>Slumpa!</a>
+
+
+        <br><br>
+
+        <a ng-show="$ctrl.startNumbersAssigned" class="waves-effect waves-light green  right large btn" ng-click="$ctrl.saveRound()"><i class="material-icons left">golf_course</i>Spela en runda UHLG!</a>
+    </div>
+
+
+</div>

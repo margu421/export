@@ -1,38 +1,46 @@
-<table class="table table-bordered">
-    <thead>
-        <th><i class="fa fa-undo"></th>
-        <th><i class="fa fa-glass"></i></th>
-        <th>Spelare</th>
-        <th>01</th>
-        <th>02</th>
-        <th>03</th>
-        <th>04</th>
-        <th>05</th>
-        <th>06</th>
-        <th>07</th>
-        <th>08</th>
-        <th>09</th>
-        <th></th>
-        <th>10</th>
-        <th>11</th>
-        <th>12</th>
-        <th>13</th>
-        <th>14</th>
-        <th>15</th>
-        <th>16</th>
-        <th>17</th>
-        <th>18</th>
+
+<!--{{$ctrl.rounds}}-->
+<div class="row">
+    <div class="col s12">
+        <form>
+            <h5>Leaderboard
+            <br>
+            <small>{{$ctrl.ongoingRound.date}} på {{$ctrl.ongoingRound.course.name}} ({{$ctrl.ongoingRound.course.clubName}})</small><br>
+            <small>Starttid: {{$ctrl.ongoingRound.startTime}}</small><br>            
+            </h5>         
+            <table class="responsive-table">
+                <thead>
+                    <th></th>
+                    <th>Hål</th>
+                    <th ng-repeat="hole in $ctrl.ongoingRound.course.scoreCard.holes">{{hole.holeNumber}}</th>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td class="grey-text">Par</td>
+                        <td  class="grey-text" ng-repeat="hole in $ctrl.ongoingRound.course.scoreCard.holes">{{hole.par}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="grey-text">Längd</td>
+                        <td  class="grey-text" ng-repeat="hole in $ctrl.ongoingRound.course.scoreCard.holes">{{hole.length}}</td>
+                    </tr>
+                    <tr ng-repeat="player in $ctrl.ongoingRound.players">
+                        <td>{{player.name}}</td> 
+                        <td></td>   
+                        <td ng-repeat="score in player.score.holes">
+                         {{score.holeNumber}}</td>
+                    </tr>
+                    <tr ng-repeat="player in $ctrl.ongoingRound.players.score | orderBy: '-round.date+startTime'">
+                        <td>{{player.name}}</td>    
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </form>
 
 
-    </thead>
-    <tbody>
-        <!--<tr ng-repeat="player in $ctrl.players | orderBy: 'startNumber'">-->
-            <td></td>
-            <td>1</td>
-            <td><span class="badge">{{player.startNumber | number: 0}}</span></td>
-            <td>{{player.$id}}</td>
-        </tr>
-    </tbody>
-</table>
-            <button class="btn btn-md btn-danger pull-right" type="submit" ng-click="$ctrl.saveRound()">
-                    <i class="fa fa-stop"></i> Avsluta runda</button>
+    </div>
+</div>

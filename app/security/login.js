@@ -24,7 +24,7 @@ angular.module('app').component('login', {
         this.logout = function () {
             auth.$unauth();
             console.log("Utloggad");
-            $location.path('/home');
+            $location.path('/');
         }
     }
 })

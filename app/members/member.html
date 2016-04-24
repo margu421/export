@@ -2,28 +2,34 @@
     <form class="col s9">
         <h4>Medlem <small>(du alltså {{$ctrl.member.name}})</small></h4>
         <div class="row">
-            <div class="input-field col s12">
-                Medlem
+            <div class="input-field col s9">
+                <h5>Medlem</h5>
                 <input placeholder="Tilltalsnamn" id="name" type="text" ng-model="$ctrl.member.name">
                 <!--<label for="name">Tilltalsnamn</label>-->
             </div>
-            <div class="input-field col s4">
-                <h6>HCP</h6>
+            <div class="input-field col s3">
+                <h5>Segrar</h5>
+                <input id="wins" class="validate" placeholder="Segrar" type="text" ng-model="$ctrl.member.wins">
+                <!--<label for="weight">Vikt</label>-->
+            </div>
+            <div class="input-field col s3">
+                <h5>HCP</h5>
                 <input id="hcp" placeholder="HCP" class="validate" type="text" ng-model="$ctrl.member.hcp">
                 <!--<label for="hcp">HCP</label>-->
             </div>
-            <div class="input-field col s4">
-                <h6>Längd</h6>
-                <input id="height" class="validate" placeholder="Längd" type="text" ng-model="$ctrl.member.height">
+            <div class="input-field col s3">
+                <h5>Smeknamn</h5>
+                <input id="nickname" class="validate" placeholder="Smeknamn" type="text" ng-model="$ctrl.member.nickname">
                 <!--<label for="height">Längd</label>-->
             </div>
-            <div class="input-field col s4">
-                <h6>Vikt</h6>
+            
+            <div class="input-field col s3">
+                <h5>Vikt</h5>
                 <input id="weight" class="validate" placeholder="Vikt" type="text" ng-model="$ctrl.member.weight">
                 <!--<label for="weight">Vikt</label>-->
             </div>
             <div class="input-field col s12">
-                <h6>Beskrivning</h6>
+                <h5>Beskrivning</h5>
                 <textarea id="desc" class="materialize-textarea" ng-model="$ctrl.member.desc"></textarea>
                 <!--<label for="desc">Beskrivning</label>-->
             </div>

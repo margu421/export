@@ -1,11 +1,9 @@
 <div class="row">
     <div class="logo-title center">
         <h1>export open.</h1>
-        <a ng-hide="$ctrl.rounds.getOngoingRound()" href="#/round" class="waves-effect blue waves-light btn-floating btn-large" ng-click="$ctrl.logout()"><i class="material-icons left">play_arrow</i></a>
-        
+
     </div>
-</div>
-<div class="row">
+    <a ng-hide="$ctrl.rounds.getOngoingRound()" href="#/round" class="waves-effect blue waves-light btn-floating btn-large" ng-click="$ctrl.logout()"><i class="material-icons left">play_arrow</i></a>
 
     <div ng-show="$ctrl.rounds.getOngoingRound()" class="center col s12 push-m2 m8">
         <div>
@@ -27,6 +25,10 @@
         <h6 style="color: red;">Spel pågår!</h6>
 
     </div>
+    <div class="row">
+
+
+    </div>
 
 
     <div class="row center">
@@ -39,9 +41,9 @@
                 </div>
             </div>
             <div class="card col s4">
-                <a href="#/leaderboard" ng-hide=""><i href="#/leaderboard" class="material-icons medium">format_list_numbered</i></a>
+                <a href="#/members" ng-hide=""><i class="material-icons medium">group</i></a>
                 <div class="card-action">
-                    Resultat
+                    Medlemmar
                 </div>
             </div>
             <div class="card col s4">

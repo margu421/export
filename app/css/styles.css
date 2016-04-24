@@ -14,6 +14,10 @@ body {
     text-align: center;
 }
 
+.competition {
+    color: red;
+}
+
 .logo-title {
     font-family: 'Love Ya Like A Sister';
     font-size: 3em;
@@ -51,3 +55,10 @@ body {
     width: 700px;
 }
 
+.leaderboard {
+    border: 1px;
+    line-height: 50%;    
+}
+.winStars {
+    color: gold;
+}

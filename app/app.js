@@ -58,21 +58,15 @@ app.config(function ($routeProvider) {
             resolve: {
                 rounds: function (fbRef, roundService) {
                     var query = fbRef.getRoundsRef().orderByChild('date');
-                        return roundService(fbRef.getRoundsRef(query)).$loaded();
+                    return roundService(fbRef.getRoundsRef(query)).$loaded();
                 },
                 currentAuth: function (auth) {
                     return auth.$requireAuth();
                 }
             }
         })
-
-        .when('/admin', {
-            template: '<admin current-auth="$resolve.currentAuth"></admin>',
-            resolve: {
-                currentAuth: function (auth) {
-                    return auth.$requireAuth();
-                }            
-            }
+        .when('/promille', {
+            template: '<promille ></promille>',
         })
         .when('/rules', {
             template: '<rules></rules>'
@@ -87,7 +81,7 @@ app.config(function ($routeProvider) {
                     var query = fbRef.getCoursesRef().orderByChild('clubName');
                     return courseService(query).$loaded();
                 }
-            }  
+            }
         })
         .when('/leaderboard', {
             template: '<leaderboard rounds="$resolve.rounds"></leaderboard>',

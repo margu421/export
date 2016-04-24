@@ -4,6 +4,14 @@ angular.module('app').component('members', {
         members: '='
     },
     controller: function () {
-      
+        
+        this.winStars = function (member) {
+                var n = member.wins;
+                var winStars = [];
+                for (var i = 1; i <= n; i++) {
+                    winStars.push(i);
+                }
+                return winStars;
+            }
     }
 })

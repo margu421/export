@@ -1,17 +1,13 @@
-<div class="android-content">
-      <ul class="members-list-three mdl-list">
-            <li ng-repeat="member in $ctrl.members" class="mdl-list__item mdl-list__item--three-line">
-                  <span class="mdl-list__item-primary-content">
-     
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <span>{{member.name}}</span>
-                  <span class="mdl-list__item-text-body">
-        {{member.desc}}
-        </span>
-                  </span>
-                  <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a>
-    </span>
-            </li>
-      </ul>
-</div>
+<div class="row">
+        <div class="col s12">
+            <div class="card col s10" style="margin: 5px;" ng-repeat="member in $ctrl.members">
+                <i class="material-icons medium left">person_pin</i>
+                <h5>{{member.name}}</h5>
+                      <i class="material-icons winStars" ng-repeat="wins in $ctrl.winStars(member) track by $index">{{$index}}star</i>               
+                <div class="card-action">
+                    {{member.desc}}
+                </div>
+            </div>
+            
+        </div>
+    </div>

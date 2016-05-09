@@ -1,26 +1,27 @@
 <div class="row">
     <div class="col m6">
         <form class="col s12">
-            <h5>Ny utomhus-långgolf-bane-runda
-            <br>
-            <small><strong>Dagens datum: </strong>{{$ctrl.date | date}}</small></h5>
+            <h5>Ny resa
+               <small><a href="#/admin/courses" class="waves-effect right blue waves-light btn btn-floating"><i class="material-icons left">golf_course</i></a></small>            
+             
+                <br>
+            <small><strong>Dagens datum: </strong>{{$ctrl.roundStartTime | date}}</small></h5>
             <!--Rundtyp-->
             <div class="input-field col s12">
-                <h6>Typ av runda</h6>
+                <h5>Typ av runda</h5>
                 <select class="browser-default col s8" ng-model="$ctrl.type" ng-options="type for type in $ctrl.roundTypes"></select>
-            </div>
+            </div>           
             <br>
             <!--Banor-->
             <div class="input-field col s12">
-                <h6>Utomhusbana</h6>
-                <select class="browser-default col s8" ng-model="$ctrl.course" ng-options="course.clubName + ' - ' + course.name for course in $ctrl.courses"></select> &nbsp;&nbsp;&nbsp;
-                <small><a href="#/admin/courses" class="waves-effect blue waves-light btn btn-floating"><i class="material-icons left">add</i></a></small>
+                <h5>Utomhusbana</h5>
+                <select class="browser-default col s8" ng-model="$ctrl.course" ng-options="course.clubName + ' - ' + course.name for course in $ctrl.courses"></select>
             </div>
             <!--Medlemmar-->
-            <div class="input-field col s8" ng-show="$ctrl.course">
-                <h6>Medlemmar</h6>
+            <div class="input-field col s8" ng-show="$ctrl.course"> 
+                <h5>Medlemmar</h5>
                 <ul class="collection">
-                    <li style="cursor: pointer;" ng-click="$ctrl.toggleInOutOfStartingField(member)" ng-repeat="member in $ctrl.members" class="collection-item" ng-class="{'green lighten-5': member.plays}">{{member.name}}</li>
+                    <li ng-hide="hideMember" style="cursor: pointer;" ng-click="$ctrl.addToStartingField(member)" ng-repeat="member in $ctrl.members" class="collection-item">{{member.name}}</li>
                 </ul>
             </div>
         </form>
@@ -31,7 +32,7 @@
             <small>Lotta startnummer</small></h5>
         <ul class="collection">
             <li ng-repeat="player in $ctrl.players" class="collection-item green lighten-5">{{player.name}}
-                <span class="badge">{{player.startNumber | number: 1}}</span>
+                <span class="badge">{{player.startNumber | number: 0}}</span>
             </li>
         </ul>
         <br>

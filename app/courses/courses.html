@@ -1,11 +1,11 @@
 <div class="row">
-    <div class="col s6">
+    <div class="col s12 m6">
         <list-courses course-data="$ctrl.courses" select-course="$ctrl.edit(course)"></list-courses>
     </div>
     <div class="col s1">
         &nbsp;
     </div>
-    <div class="col s5">
+    <div class="col s12 m6">
         <edit-course create-new-course="$ctrl.createCourse(courseData)"
             edited-course="$ctrl.editedCourse"
             update-course="$ctrl.updateCourse()"></edit-course>

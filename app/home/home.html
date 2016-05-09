@@ -1,63 +1,63 @@
 <div class="row">
-    <div class="logo-title center">
-        <h1>export open.</h1>
-
+    <div class="center">
+        <h1 class="exportopen">export open.</h1>
     </div>
-    <a ng-hide="$ctrl.rounds.getOngoingRound()" href="#/round" class="waves-effect blue waves-light btn-floating btn-large" ng-click="$ctrl.logout()"><i class="material-icons left">play_arrow</i></a>
-
-    <div ng-show="$ctrl.rounds.getOngoingRound()" class="center col s12 push-m2 m8">
-        <div>
-            <div class="preloader-wrapper active">
-                <div class="spinner-layer spinner-red-only">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
+    <div class="center col s6 push-s3 push-m3 m6">
+        <a ng-hide="$ctrl.rounds.getOngoingRound()" href="#/round" class="waves-effect blue waves-light btn-floating btn-large"><i class="material-icons left">play_arrow</i></a>
+        <div ng-show="$ctrl.rounds.getOngoingRound()" class=" card col center col s12 push-m2 m8">
+            <div class="progress">
+                <div class="indeterminate"></div>
             </div>
-            <a href="#/leaderboard" ng-hide=""><i class="material-icons medium">format_list_numbered</i></a>
-        </div>
-        <h6 style="color: red;">Spel pågår!</h6>
-
-    </div>
-    <div class="row">
-
-
-    </div>
-
-
-    <div class="row center">
-        <div class="col s12 push-m2 m8">
-            <div class="card green">
-                <div class="card-content white-text">
-                    <span class="card-title">Utomhuslånggolfstävlingen med stort U.</span>
-                    <p>81 hål om året. 8 spelare. 1 tävling. 7 förlorare. 1 gammal keps. 2 varma vantar. Fårfioler. Sura släntar. Avspärrning. Avsmalning. Enputtar. Tvåputtar. Treputtar. Borås. Ute i tid. Stanare. Diskoteka. 1 segrare. 1 kavaj.
-                    </p>
-                </div>
-            </div>
-            <div class="card col s4">
-                <a href="#/members" ng-hide=""><i class="material-icons medium">group</i></a>
-                <div class="card-action">
-                    Medlemmar
-                </div>
-            </div>
-            <div class="card col s4">
-                <a href="#/promille" ng-hide=""><i class="material-icons medium">insert_chart</i></a>
-                <div class="card-action">
-                    Promille
-                </div>
-            </div>
-            <div class="card col s4">
-                <a href="#/listRounds" ng-hide=""><i class="material-icons medium">history</i></a>
-                <div class="card-action">
-                    Historik
-                </div>
+            <div class="center card-action">
+                <a href="#/leaderboard">
+            <small style="color: red;">Spel pågår!</small></a>
             </div>
         </div>
     </div>
+</div>
+
+<div class="row center">
+    <div class="col s12 push-m2 m8">
+        <div class="card green lighten-1">
+            <div class="card-content white-text">
+                <h5>Utomhuslånggolfstävlingen med stort U.</h5>
+                <small>81 hål om året. 8 spelare. 1 tävling. 7 förlorare. 1 gammal keps. 2 varma vantar. Fårfioler. Sura släntar. Avspärrning. Avsmalning. Enputtar. Tvåputtar. Treputtar. Borås. Ute i tid. Stanare. Diskoteka. 1 segrare. 1 kavaj.
+                </small>
+            </div>
+        </div>
+        
+        <a href="#/members" ng-hide="">
+        <div class="card col s3">
+            <i class="material-icons">group</i>
+            <div class="card-content">
+            <small>Medlemmar</small>
+            </div>
+        </div>
+        </a>
+        <a  href="#/listRounds" ng-hide="">
+        <div class="card col s3">
+            <i class="material-icons">history</i>
+            <div class="card-content">
+            <small>Resultat</small>
+            </div>
+        </div>
+        </a>
+        <a href="#/rules" ng-hide="">
+        <div class="card col s3">
+            <i class="material-icons">assignment</i>
+            <div class="card-content">
+            <small>Regler</small>
+            </div>
+        </div>
+        </a>
+        <a class="red-text" href="#/admin/courses" ng-hide="">
+        <div class="card col s3" >
+            <i class="material-icons">golf_course</i>
+            <div class="card-content">
+            <small>Banor</small>
+            </div>
+        </div>
+        </a>
+    </div>
+</div>
 </div>

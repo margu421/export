@@ -1,0 +1,263 @@
+ {
+    "-KFuoj-vxYeeKVnjb7Ol" : {
+      "clubName" : "Väddö Golfklubb",
+      "desc" : "",
+      "link" : "http://www.vgk.nu",
+      "name" : "Tävlingsbanan",
+      "scoreCard" : {
+        "holes" : [ {
+          "holeNumber" : 1,
+          "par" : 4
+        }, {
+          "holeNumber" : 2,
+          "par" : 3
+        }, {
+          "holeNumber" : 3,
+          "par" : 4
+        }, {
+          "holeNumber" : 4,
+          "par" : 3
+        }, {
+          "holeNumber" : 5,
+          "par" : 5
+        }, {
+          "holeNumber" : 6,
+          "par" : 4
+        }, {
+          "holeNumber" : 7,
+          "par" : 4
+        }, {
+          "holeNumber" : 8,
+          "par" : 5
+        }, {
+          "holeNumber" : 9,
+          "par" : 4
+        }, {
+          "holeNumber" : 10,
+          "par" : 4
+        }, {
+          "holeNumber" : 11,
+          "par" : 4
+        }, {
+          "holeNumber" : 12,
+          "par" : 3
+        }, {
+          "holeNumber" : 13,
+          "par" : 4
+        }, {
+          "holeNumber" : 14,
+          "par" : 3
+        }, {
+          "holeNumber" : 15,
+          "par" : 5
+        }, {
+          "holeNumber" : 16,
+          "par" : 3
+        }, {
+          "holeNumber" : 17,
+          "par" : 5
+        }, {
+          "holeNumber" : 18,
+          "par" : 3
+        } ]
+      }
+    },
+    "-KFwwdqxCZIoGzmdQugI" : {
+      "clubName" : "Isaberg GK",
+      "desc" : "Från 1993 bildar de 18 hålen Väster om Nissan en bana - Västra Banan - . Banan ligger i Gislaved  Kommun.  Banan är skogsbana med SS71. De första 4 hålen sträcker sig utmed Nissan och Hammarsjön,  de första 9 hålen anses som de lättaste de sista nio är något längre och mer kuperade.",
+      "link" : "http://www.isaberggolf.com/se/banan/vastra-banan",
+      "name" : "Västra banan",
+      "scoreCard" : {
+        "holes" : [ {
+          "hcp" : 12,
+          "holeNumber" : 1,
+          "length" : 323,
+          "par" : 4
+        }, {
+          "hcp" : 8,
+          "holeNumber" : 2,
+          "length" : 312,
+          "par" : 4
+        }, {
+          "hcp" : 18,
+          "holeNumber" : 3,
+          "length" : 125,
+          "par" : 3
+        }, {
+          "hcp" : 16,
+          "holeNumber" : 4,
+          "length" : 310,
+          "par" : 4
+        }, {
+          "hcp" : 4,
+          "holeNumber" : 5,
+          "length" : 155,
+          "par" : 3
+        }, {
+          "hcp" : 10,
+          "holeNumber" : 6,
+          "length" : 345,
+          "par" : 4
+        }, {
+          "hcp" : 6,
+          "holeNumber" : 7,
+          "length" : 280,
+          "par" : 4
+        }, {
+          "hcp" : 2,
+          "holeNumber" : 8,
+          "length" : 470,
+          "par" : 5
+        }, {
+          "hcp" : 14,
+          "holeNumber" : 9,
+          "length" : 320,
+          "par" : 4
+        }, {
+          "hcp" : 7,
+          "holeNumber" : 10,
+          "length" : 333,
+          "par" : 4
+        }, {
+          "hcp" : 15,
+          "holeNumber" : 11,
+          "length" : 458,
+          "par" : 5
+        }, {
+          "hcp" : 1,
+          "holeNumber" : 12,
+          "length" : 355,
+          "par" : 4
+        }, {
+          "hcp" : 13,
+          "holeNumber" : 13,
+          "length" : 167,
+          "par" : 3
+        }, {
+          "hcp" : 3,
+          "holeNumber" : 14,
+          "length" : 320,
+          "par" : 4
+        }, {
+          "hcp" : 17,
+          "holeNumber" : 15,
+          "length" : 110,
+          "par" : 3
+        }, {
+          "hcp" : 5,
+          "holeNumber" : 16,
+          "length" : 322,
+          "par" : 4
+        }, {
+          "hcp" : 11,
+          "holeNumber" : 17,
+          "length" : 440,
+          "par" : 5
+        }, {
+          "hcp" : 9,
+          "holeNumber" : 18,
+          "length" : 355,
+          "par" : 4
+        } ]
+      }
+    },
+    "-KFwyn-l8oatbyIp9C3q" : {
+      "clubName" : "Isaberg GK",
+      "desc" : "1993 bildar de 18 hålen Öster om Nissan en bana - Östra Banan - . Banan ligger i Gnosjö Kommun och har ss72. Östra Banan anses av många som smal och har en tuff öppning med stor höjdskillnad. Hålen 10-18 är intakt från dom första 9 hålen på \"gamla banan\".",
+      "link" : "http://http://www.isaberggolf.com/se/banan/ostra-banan",
+      "name" : "Östra banan",
+      "scoreCard" : {
+        "holes" : [ {
+          "hcp" : 3,
+          "holeNumber" : 1,
+          "length" : 348,
+          "par" : 4
+        }, {
+          "hcp" : 17,
+          "holeNumber" : 2,
+          "length" : 125,
+          "par" : 3
+        }, {
+          "hcp" : 15,
+          "holeNumber" : 3,
+          "length" : 465,
+          "par" : 5
+        }, {
+          "hcp" : 7,
+          "holeNumber" : 4,
+          "length" : 344,
+          "par" : 4
+        }, {
+          "hcp" : 9,
+          "holeNumber" : 5,
+          "length" : 341,
+          "par" : 4
+        }, {
+          "hcp" : 11,
+          "holeNumber" : 6,
+          "length" : 158,
+          "par" : 3
+        }, {
+          "hcp" : 13,
+          "holeNumber" : 7,
+          "length" : 469,
+          "par" : 5
+        }, {
+          "hcp" : 5,
+          "holeNumber" : 8,
+          "length" : 342,
+          "par" : 4
+        }, {
+          "hcp" : 1,
+          "holeNumber" : 9,
+          "length" : 385,
+          "par" : 4
+        }, {
+          "hcp" : 4,
+          "holeNumber" : 10,
+          "length" : 482,
+          "par" : 5
+        }, {
+          "hcp" : 12,
+          "holeNumber" : 11,
+          "length" : 266,
+          "par" : 4
+        }, {
+          "hcp" : 6,
+          "holeNumber" : 12,
+          "length" : 500,
+          "par" : 5
+        }, {
+          "hcp" : 16,
+          "holeNumber" : 13,
+          "length" : 310,
+          "par" : 4
+        }, {
+          "hcp" : 14,
+          "holeNumber" : 14,
+          "length" : 306,
+          "par" : 4
+        }, {
+          "hcp" : 18,
+          "holeNumber" : 15,
+          "length" : 132,
+          "par" : 3
+        }, {
+          "hcp" : 2,
+          "holeNumber" : 16,
+          "length" : 333,
+          "par" : 4
+        }, {
+          "hcp" : 8,
+          "holeNumber" : 17,
+          "length" : 176,
+          "par" : 3
+        }, {
+          "hcp" : 10,
+          "holeNumber" : 18,
+          "length" : 318,
+          "par" : 4
+        } ]
+      }
+    }
+  }

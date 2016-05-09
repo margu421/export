@@ -1,0 +1,460 @@
+
+
+.sgf-git-templates-widget-placeholder { font-family: Arial,sans-serif; font-size: 12px; }
+.sgf-git-templates-widget-loading { background: #fff url("http://gitwidgets.golf.se/widget/ui/img/loading.gif") center center no-repeat; min-height: 50px; }
+
+/* Generic */
+
+.sgf-git-templates-widget-placeholder input.text { height: 18px; background-color: #FFFFFF; border: 1px solid #CCCCCC; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s; border-radius: 2px; color: #555555; display: inline-block; font-size: 14px; height: 16px; line-height: 20px; margin-bottom: 10px; margin-top: 0px; padding: 4px 6px; vertical-align: middle; }
+
+.sgf-git-templates-widget-placeholder .btn { border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25); }
+.sgf-git-templates-widget-placeholder .btn { -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; background-color: #F5F5F5; background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6); background-repeat: repeat-x; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #A2A2A2; border-image: none; border-radius: 4px 4px 4px 4px; border-style: solid;
+    border-width: 1px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05); color: #333333; cursor: pointer; display: inline-block; font-size: 13px; line-height: 16px; margin-bottom: 0; padding: 3px 12px; text-align: center; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: top; }
+    
+    
+/* Error styling */
+.sgf-git-templates-widget-placeholder .alert { background-color: #FCF8E3; border: 1px solid #FBEED5; border-radius: 4px 4px 4px 4px; color: #C09853; margin-bottom: 20px; padding: 8px 35px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+.sgf-git-templates-widget-placeholder .alert-danger, .sgf-git-templates-widget-placeholder .alert-error { background-color: #F2DEDE; border-color: #EED3D7; color: #B94A48; }
+
+
+/* Login widget */
+
+.sgf-git-templates-login { width: 100%; background: #F4F4EE; padding: 0 0 5px 0; font-family: arial, Verdana, Sans-Serif; margin: 0; }
+.sgf-git-templates-login-container { padding: 10px 15px 15px 15px }
+.sgf-git-templates-login *, .sgf-git-templates-login *:before, .sgf-git-templates-login *:after { -moz-box-sizing: content-box; box-sizing: content-box; }
+
+.sgf-git-templates-login fieldset { border: 0 none; margin: 0; padding: 0;  }
+.sgf-git-templates-login legend { color: #339900; font-weight: 700; margin: 0 0 10px; color: #339900; font-size: 13px; text-transform: uppercase; border: 0; line-height: 100%; }
+.sgf-git-templates-login label { display: block; font-weight: 700; font-size: 12px; color: #333333 }
+.sgf-git-templates-login #golfse-login-username-first { width: 50%; margin-right: 10px; }
+.sgf-git-templates-login #golfse-login-username-last { width: 25%; }
+.sgf-git-templates-login #golfse-login-password { width: 50%; }
+.sgf-git-templates-login #golfse-login-form { margin-bottom: 0; }
+
+.sgf-git-templates-login button { vertical-align: top; background: url("http://gitwidgets.golf.se/widget/ui/Img/button_grey_75.gif") no-repeat scroll 0 0 transparent; border: 0 none; height: 16px; width: auto; font-size: 12px; }
+.sgf-git-templates-login hr { color: #e3e5dc; background-color: #e3e5dc; height: 1px; border: 0; margin-bottom: 20px;  }
+.sgf-git-templates-login a.sgf-git-templates-login-widget-helplink { display: block; text-decoration: none; font-size: 12px; }
+.sgf-git-templates-login a.sgf-git-templates-login-widget-helplink, .sgf-git-templates-login a.sgf-git-templates-login-widget-helplink:visited, .sgf-git-templates-login a.sgf-git-templates-login-widget-helplink:hover { color: #3399FF; }
+.sgf-git-templates-login input { font-family: Arial ,​Verdana,​Sans-Serif; }
+.sgf-git-templates-login button { -moz-box-sizing: content-box; box-sizing: content-box; height: 26px; width: 59px; padding: 0; color: #000; }
+
+
+/* end Login widget */
+
+/* News list widget */
+.sgf-git-templates-newslist {}
+.sgf-git-templates-newslist-top { background: url("http://gitwidgets.golf.se/widget/ui/img/news-top-bkg.png") repeat-x; height: 42px;font-size: 15px; }
+.sgf-git-templates-newslist .sgf-git-templates-newslist-item { margin: 10px 0; }
+.sgf-git-templates-newslist h2, .sgf-git-templates-newslist h3 { margin: 0; padding: 0; line-height: 100%; }
+.sgf-git-templates-newslist h2 { font-size: 16px; color: #fff; font-weight: normal; margin-left: 15px; padding-top: 10px; }
+.sgf-git-templates-newslist h3 { font-size: 14px; margin-bottom: 3px; }
+.sgf-git-templates-newslist h3 a { color: #000; text-decoration:none; }
+.sgf-git-templates-newslist h2 img { margin-left: 3px; vertical-align: bottom; }
+.sgf-git-templates-newslist span a { font-size: 12px; line-height: 100%; text-decoration: none; }
+.sgf-git-templates-newslist span a:hover { text-decoration: none; }
+.sgf-git-templates-newslist .sgf-git-templates-newslist-item { padding-bottom: 10px; }
+.sgf-git-templates-newslist, .sgf-git-templates-newslist span a, .sgf-git-templates-newslist span a:hover  { color: #333333 }
+.sgf-git-templates-newslist .sgf-git-templates-newslist-item { border-bottom: 1px solid #DCDCDC; }
+
+
+/* end News list widget */
+ 
+/* Competition list */
+.sgf-git-templates-competition-list {}
+.sgf-git-templates-competition-list table { width: 100%; border-collapse: collapse; border: 1px #dcdcdc solid; font-size: 12px; }
+.sgf-git-templates-competition-list th { text-align: left; background: #e9e9e9; padding: 10px 12px;  }
+.sgf-git-templates-competition-list td { padding: 7px 12px; }
+.sgf-git-templates-competition-list .row-odd td { background: #fff; }
+.sgf-git-templates-competition-list .row-even td { background: #fbfbfb; }
+.sgf-git-templates-competition-list a { color: #1491c9; font-weight: bold; text-decoration: none; }
+  
+/* end Competition list */
+
+/* Competition Info */
+.sgf-git-templates-competition-info h1 { font-size: 16px; border-bottom: 1px #dcdcdc solid; padding-bottom: 10px; }
+.sgf-git-templates-competition-info table { width: 100%; /*max-width: 960px;*/ font-size: 12px; }
+.sgf-git-templates-competition-info table { border: 1px #dcdcdc solid; border-collapse: collapse; }
+.sgf-git-templates-competition-info table th { text-align: left; background: #e9e9e9; padding: 10px 8px 10px 12px; }
+.sgf-git-templates-competition-info table td { padding: 8px 8px 8px 12px; }
+.sgf-git-templates-competition-info table#sgf-git-templates-competition-info-content { border: none; }
+.sgf-git-templates-competition-info table#sgf-git-templates-competition-info-content th { background: none; padding: 3px 0; display: inline; margin-right: 20px; }
+#sgf-git-templates-competition-info-content th { text-align: left; }
+.sgf-git-templates-competition-info .row-odd td { background: #fff; }
+.sgf-git-templates-competition-info .row-even td { background: #fbfbfb; }
+.sgf-git-templates-competition-info a.sgf-git-templates-competition-info-linkback { color: #1491C9; display: block; float: left; font-weight: bold; margin-bottom: 20px; margin-top: 20px; text-decoration: none; width: 100%; }
+.sgf-git-templates-competition-info-content-header { display: inline; clear: both; float: left; font-weight: bold; width: 150px; }
+.sgf-git-templates-competition-info-content-info { display: inline; float: left; }
+.sgf-git-templates-competition-info-content-header, .sgf-git-templates-competition-info-content-info { padding: 4px 0; }
+#sgf-git-templates-competition-info-content { float: left; width: 100%; }
+.sgf-git-templates-competition-info-contacts { float: left; width: 100%; margin: 10px 0; } 
+.sgf-git-templates-competition-info-contacts strong { display: block; margin-bottom: 5px; }
+.sgf-git-templates-competition-info-notes { float: left; } 
+.sgf-git-templates-competition-info-result-content { margin-bottom: 20px; }
+.sgf-git-templates-competition-info-content { float: left;width: 49%;}
+/* end Competition Info */
+
+/* Class box*/
+.sgf-git-templates-competition-class-container 
+{
+    padding: 10px;
+    border: 1px solid #d2d2d2;
+    background-color: #fbfbfb;
+    margin-bottom: 10px;
+}
+.sgf-git-templates-competition-class-content {
+    display: none;
+    margin-top: 10px;
+}
+.sgf-git-templates-competition-class-content-head {
+    clear: both;
+}
+.sgf-git-templates-competition-class-container h1 { margin: 0; font-size: 14px; font-weight: bold; border: none;float: left;padding: 4px 0 0 0; }
+.sgf-git-templates-competition-class-toggle-button 
+{
+    width: 22px;
+    height: 22px;
+    float: right;
+    cursor: pointer;
+    background: url("http://gitwidgets.golf.se/widget/ui/img/glyphicons-halflings.png");
+    
+}
+
+.sgf-git-templates-competition-class-toggle-button-down {background-position: -284px -118px;}
+.sgf-git-templates-competition-class-toggle-button-up {background-position: -309px -116px;}
+
+/* end Class box*/
+
+.sgf-git-templates-competition-info select
+{
+    margin-left: 10px;
+}
+.sgf-git-templates-competition-info label
+{
+    font-size: 1.1em;
+    color: #333333;
+}
+.sgf-git-templates-competition-info .form-inline
+{
+    margin-bottom: 10px;
+}
+
+.sgf-git-templates-competition-info .glyphicon-user:before {
+  content: "\e008";
+}
+
+/* Competition Info Scorecard */
+
+.sgf-git-templates-competition-info .table-scorecard
+{
+}
+
+.sgf-git-templates-competition-info .table-scorecard th
+{
+    background-color: #e9e9e9;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.sgf-git-templates-competition-info .table-scorecard .scorecard-hole-row
+{
+    background-color: #f7f7f7;
+}
+
+.sgf-git-templates-competition-info .table-scorecard td
+{
+    border: 1px solid #dcdcdc;
+    padding: 5px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    text-align: center;
+    width: 5%;
+    font-size: 90%;
+}
+
+.sgf-git-templates-competition-info .nav-tabs > li.active > a
+{
+    color: #228b22;
+    font-weight: bold;
+}
+
+.sgf-git-templates-competition-info .toggle-scorecard > span
+{
+    font-size: 1.2em;
+}
+
+/* end Competition Info Scorecard */
+
+/* Scorecard widget */
+.sgf-git-templates-scorecard { font-family: Arial, Verdana, Sans-Serif; font-size: 12px; }
+.sgf-git-templates-scorecard table { border-collapse: collapse; width: 100%;}
+.sgf-git-templates-scorecard table th { font-weight: normal; }
+.sgf-git-templates-scorecard table .sgf-git-templates-scorecard-row-length-inout, .sgf-git-templates-scorecard table .sgf-git-templates-scorecard-row-length-total, .sgf-git-templates-scorecard table .sgf-git-templates-scorecard-row-par-inout, .sgf-git-templates-scorecard table .sgf-git-templates-scorecard-row-par-sum { font-weight: bold; }
+.sgf-git-templates-scorecard table tr.sgf-git-templates-scorecard-hole-caption-row th { background: #e9e9e9; font-weight: bold; padding: 6px 0; }
+.sgf-git-templates-scorecard table td, .sgf-git-templates-scorecard table th { border: 1px #dcdcdc solid; padding: 5px; text-align:center; }
+.sgf-git-templates-scorecard table .sgf-git-templates-scorecard-hole-inout { text-transform: uppercase; }
+.sgf-git-templates-scorecard table .sgf-git-templates-scorecard-hole-total { text-transform: uppercase; }
+
+.sgf-git-templates-competition-info-result .birdie  
+{
+    background-color: #c54043;
+    border: 1px solid black;
+    color: white;
+}
+.sgf-git-templates-competition-info-result .eagle
+{
+    background-color: #c54043;
+    border: 1px solid black;
+    color: white;
+}
+.sgf-git-templates-competition-info-result .albatross
+{
+    background-color: #c54043;
+    border: 1px solid black;
+    color: white;
+}
+.sgf-git-templates-competition-info-result .boogie
+{
+    background-color: #33aed8;
+    border: 1px solid black;
+    color: white;
+}
+.sgf-git-templates-competition-info-result .doubleboogie
+{
+    background-color: #257fa1;
+    border: 1px solid black;
+    color: white;
+}
+
+
+/* end Scorecard widget */
+
+/* Slopecalculator widget */
+.sgf-git-templates-slopecalculator {}
+.sgf-git-templates-slopecalculator *, .sgf-git-templates-slopecalculator *:before, .sgf-git-templates-slopecalculator *:after { -moz-box-sizing: content-box;box-sizing: content-box; }
+.sgf-git-templates-slopecalculator .sgf-git-templates-slopecalculator-form { border: 1px #dcdcdc solid; background: #fbfbfb; padding: 15px 15px 10px 15px; }
+.sgf-git-templates-slopecalculator .sgf-git-templates-slopecalculator-form label { font-weight: bold; margin-right: 10px; }
+.sgf-git-templates-slopecalculator .sgf-git-templates-slopecalculator-form #sgf-git-templates-slopecalculator-hcp { padding: 6px; }
+.sgf-git-templates-slopecalculator .sgf-git-templates-slopecalculator-form h3 { margin: 0; padding: 0; padding-bottom: 7px; margin-bottom: 12px; border-bottom: 1px #dcdcdc solid; }
+.sgf-git-templates-slopecalculator .sgf-git-templates-slopecalculator-form .btn { color: #fff; padding: 5px 10px; background-image: linear-gradient(to bottom, #858585, #707070); }
+
+.sgf-git-templates-slopecalculator table { width: 100%; border-collapse: collapse; border: 1px #dcdcdc solid; margin-top: 20px; font-size: 12px; } 
+.sgf-git-templates-slopecalculator table th { text-align: left; background: #e9e9e9;} 
+.sgf-git-templates-slopecalculator table td, .sgf-git-templates-slopecalculator table th { border-bottom: 1px #dcdcdc solid; padding: 9px 15px; }
+.sgf-git-templates-slopecalculator table .row-odd { background: #fff;}
+.sgf-git-templates-slopecalculator table .row-even { background: #fbfbfb; }
+.sgf-git-templates-slopecalculator .sgf-git-templates-slopecalculator-btn {
+    background: url("http://gitwidgets.golf.se/widget/ui/img/ok-button.png") no-repeat; 
+    width: 45px;
+    height: 35px; 
+    border: none; 
+    padding: 0; 
+    vertical-align: top;
+    cursor: pointer;
+    cursor: hand;
+}
+
+/* end Slopecalculator widget */
+
+/* Bookings widget */
+.sgf-git-templates-bookings { font-family: Arial, Verdana, Sans-Serif; color: #333333; }
+.sgf-git-templates-bookings *, .sgf-git-templates-bookings *:before, .sgf-git-templates-bookings *:after { -moz-box-sizing: border-box;box-sizing: border-box; }
+.sgf-git-templates-bookings input, select { background: #fff; }
+.sgf-git-templates-widget .input-append .add-on { height: 30px; }
+.sgf-git-templates-bookings .sgf-git-templates-bookings-datepicker-icon { cursor: pointer; cursor: hand; }
+.sgf-git-templates-bookings .sgf-git-templates-bookings-nav { height: 14px; text-align: center; background-color: #E9E9E9; font-family: Arial, Verdana, Sans-Serif; font-size: 12px; font-weight: bold; padding: 10px; border: 1px #b0afaf solid; margin-bottom: 10px; }
+.sgf-git-templates-bookings .sgf-git-templates-bookings-top { border: 1px #dcdcdc solid; background-color: #fbfbfb; padding: 10px; margin-bottom: 10px; }
+.sgf-git-templates-bookings .sgf-git-templates-bookings-top label { font-size: 13px; font-weight: bold; margin-right: 10px; }
+
+.sgf-git-templates-bookings .gap-right {
+    margin-right: 10px; 
+}
+
+.sgf-git-templates-bookings .gap-top {
+    margin-top: 10px; 
+}
+
+.sgf-git-templates-bookings .gap-right-large {
+    margin-right: 26px; 
+}
+
+.sgf-git-templates-bookings .pad-right-large {
+    padding-right: 26px; 
+    margin-right: 26px; 
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-nav-prev {
+    float: left;
+    cursor: pointer;
+    cursor: hand;
+} 
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-nav-next {
+    float: right;
+    cursor: pointer;
+    cursor: hand;
+} 
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table {
+    width: 100%;
+    border: 1px #b0afaf solid;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td {
+    border: 1px #b0afaf solid;
+    background-color: #f4f5f6;
+    color: #000;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: top;
+    padding: 0px;
+    margin: 0px;
+    min-height: 50px;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td .booking-time {
+    background-color: #fff;
+    float: right;
+    width: 22px;
+    padding: 3px;
+    border-left: 1px #b0afaf solid;
+    border-bottom: 1px #b0afaf solid;
+    font-weight: bold;
+    font-size: 11px;
+    word-wrap: normal !important;
+}
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td .booking-slot-content {
+    clear: both;
+    padding-top: 5px;
+    word-wrap: break-word;
+    line-height: 14px;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td .booking-slot-players {
+    margin-bottom: 2px;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td .booking-slot-dot-occupied {
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    border-radius: 50%;
+    background-color: #000; 
+    height: 6px; 
+    width: 6px;
+    display: inline-block;
+    margin: 1px;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid .sgf-git-templates-bookings-grid-headercell {
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    background-color: #E9E9E9;
+    padding: 10px;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td.booking-unavailable {
+    color: #B0AFAF;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td.booking-unavailable .booking-slot-dot-occupied {
+    background-color: #B0AFAF;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td.booking-unavailable-dummy {
+    background-color: #FFFFFF;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td.booking-unavailable-perm {
+    color: #B0AFAF;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td.booking-unavailable-perm .booking-slot-dot-occupied {
+    background-color: #B0AFAF;
+}
+
+.sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td.booking-available {
+    background: #CEEFCE;
+}
+
+div.ui-datepicker{
+ font-size: 13px;
+}
+
+.booking-slot-tooltip-players {
+    font-size: 12px;
+}
+
+.booking-slot-tooltip-players hr {
+    border: 0px;
+    color: #b0afaf;
+    background-color: #b0afaf;
+    height: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.booking-slot-tooltip-players-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.booking-slot-tooltip-reservation-list {
+    margin: 3px 0 0 20px;
+    padding: 0;
+}
+
+.booking-slot-tooltip-players-list .maleplayer {
+    list-style-type: none;    
+    background: url("http://gitwidgets.golf.se/widget/ui/img/usermale20.png") no-repeat top left;
+    padding-left: 25px;
+    margin: 4px;
+}
+
+.booking-slot-tooltip-players-list .femaleplayer {
+    list-style-type: none;    
+    background: url("http://gitwidgets.golf.se/widget/ui/img/userfemale20.png") no-repeat top left;
+    padding-left: 25px;
+    margin: 4px;
+}
+
+@media screen and (max-width: 499px) {
+    .sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td .booking-slot-content {
+        display: none;
+    }
+    
+    .sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td .booking-slot-players {
+        /*display: none;*/
+    }
+    
+    .sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td .booking-slot-dot-occupied {
+        height: 4px;
+        width: 4px;
+    }
+
+    .sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td {
+        height: 30px;
+        vertical-align: middle;
+    }
+
+    .sgf-git-templates-bookings .sgf-git-templates-bookings-grid table td .booking-time {
+        text-align: center;
+        background: none;
+        float: none;
+        width: 22px;
+        padding: 3px;
+        border: 0px;
+        font-weight: bold;
+        font-size: 11px;
+    }
+}
+
+
+/* ****************** */
+/* CMS specific stuff */
+/* ****************** */
+
+/* IdrottOnline */
+#MainDiv .sgf-git-templates-login-widget fieldset { border: none !important; }

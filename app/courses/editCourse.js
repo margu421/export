@@ -7,6 +7,7 @@ angular.module('app').component('editCourse', {
         editedCourse: "="
     },
     controller: function ($scope) {
+        
 
         $scope.$watch('$ctrl.editedCourse', (function (newData) {
             if (!!newData) {
@@ -18,7 +19,18 @@ angular.module('app').component('editCourse', {
                 this.scoreCard = newData.scoreCard;
             }
         }).bind(this));
-
+        
+        
+        this.scoreCard = {}
+        
+        this.setDefaults = function () {
+                this.clubName = "",
+                this.name = "",
+                this.link = "http://",
+                this.desc = ""
+                this.scoreCard.holes = generateScoreCardHoles();
+        }    
+        
         function generateScoreCardHoles() {
             var scoreCard = [];
             for (var i = 1; i <= 18; i++) {
@@ -26,17 +38,9 @@ angular.module('app').component('editCourse', {
             }
             return scoreCard;
         }
-
-        this.setDefaults = function () {
-                this.clubName = "",
-                this.name = "",
-                this.link = "http://",
-                this.desc = ""
-                this.scoreCard = generateScoreCardHoles();
-        }
-
+        
         this.setDefaults();
-
+        
         this.create = function () {
             this.courseData = {
                 clubName: this.clubName

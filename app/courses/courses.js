@@ -11,10 +11,13 @@ angular.module('app').component('courses', {
         }
 
         this.createCourse = function (courseData) {
+            Materialize.toast('Bana skapad!', 2000, 'rounded');
             this.courses.$add(courseData);
         }
         
         this.updateCourse = function () {
+            Materialize.toast('Uppdaterad!', 2000, 'rounded');
+
             this.courses.$save(this.editedCourse);
         }
 

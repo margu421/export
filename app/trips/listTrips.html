@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col s12">
+        <form>
+            <h5>Utomhus-lång-golf-rundor
+            <span ng-hide="$ctrl.rounds.getOngoingRound()" class="right"><a class="waves-effect waves-light green right btn-floating" href="#/round"><i class="material-icons">add</i></a></span>
+            </h5>
+            <br>
+
+            <table class="table">
+                <thead>
+                    <th>Datum</th>
+                    <th><i class="material-icons">format_list_numbered</i></a></th>
+                    <th>Bana (utomhus)</th>
+                    <th>Typ av runda</th>
+                    <th>Starttid</th>
+                    <th>Sluttid</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="round in $ctrl.rounds | orderBy: '-(date + startTime)'">
+                        <td>{{round.date | date: 'yyyy-MM-dd'}}</td>
+                        <td>{{round.leaderboard}}
+                            <!--<a href="#/leaderboard/" ng-hide="round.ongoing">
+                                <i class="material-icons small">format_list_numbered</i></a>-->
+                            <a href="#/leaderboard/" ng-show="round.ongoing">
+                                <i class="material-icons red-text">format_list_numbered</i></a>
+                        </td>
+                        <td><small>{{round.course.clubName}}</small><br>
+                            {{round.course.name}}
+                        </td>
+                        <td>{{round.type}}</td>
+                        <td>{{round.startTime}}</td>
+                        <td>{{round.endTime}}
+                            <span ng-show="round.ongoing">
+                                <div class="progress">
+                                    <div class="indeterminate"></div>
+                                    </div>
+                                    <h6 style="color: red;">Spel pågår!</h6>
+                            </span>
+                        </td>
+                        <td>                           
+                           <a ng-hide="round.endTime" ng-click="$ctrl.endRound(round.$id)" class="btn-floating small waves-effect waves-light red"><i class="material-icons">pause</i></a>
+                            <a ng-hide="$ctrl.rounds.getOngoingRound()" ng-click="$ctrl.restartRound(round.$id)" class="btn-floating small waves-effect waves-light blue"><i class="material-icons">history</i</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </form>
+
+
+    </div>
+</div>

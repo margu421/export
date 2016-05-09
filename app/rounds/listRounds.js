@@ -4,24 +4,22 @@ angular.module('app').component('listRounds', {
         rounds: '=',
         selectRound: "&"
     },
-    controller: function (fbRef, roundService) {
+    controller: function (fbRef, roundService, $location) {
 
         this.rounds = roundService(fbRef.getRoundsRef());
         
         this.ongoingRound = this.rounds.getOngoingRound();
-        
+              
         this.showLeaderBoard = function (round) {
-            console.log("leaderboard for: " + round.$id);
+            console.log("Leaderboard for: " + round.$id);
             this.selectRound({round: round}); 
-        }
-               
+            $location.path('/leaderboard/' + round.$id);
+        }           
         this.endRound = function ($id) {
             console.log($id);
-            var endTime = new Date();
             var round = fbRef.getRoundsRef().child($id);
             round.update({
                 "ongoing": false,
-                "endTime": endTime.toJSON()
             });
         }
         this.restartRound = function ($id) {
@@ -29,7 +27,6 @@ angular.module('app').component('listRounds', {
             var round = fbRef.getRoundsRef().child($id);
             round.update({
                 "ongoing": true,
-                "endTime": null
             });
         }
     }

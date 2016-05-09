@@ -20,23 +20,6 @@ app.config(function ($routeProvider) {
                 }
             }
         })
-        .when('/round', {
-            template: '<round courses="$resolve.courses" members="$resolve.members"></round>',
-            resolve: {
-                courses: function (fbRef, $firebaseArray, auth) {
-                    return auth.$requireAuth().then(function () {
-                        var query = fbRef.getCoursesRef().orderByChild('name');
-                        return $firebaseArray(fbRef.getCoursesRef(query)).$loaded();
-                    })
-                },
-                members: function (fbRef, $firebaseArray) {
-                    return $firebaseArray(fbRef.getMembersRef()).$loaded();
-                },
-                currentAuth: function (auth) {
-                    return auth.$requireAuth();
-                }
-            }
-        })
         .when('/members', {
             template: '<members members="$resolve.members"></members>',
             resolve: {
@@ -53,45 +36,13 @@ app.config(function ($routeProvider) {
                 }
             }
         })
-        .when('/listRounds', {
-            template: '<list-rounds rounds="$resolve.rounds" current-auth="$resolve.currentAuth"></list-rounds>',
-            resolve: {
-                rounds: function (fbRef, roundService) {
-                    var query = fbRef.getRoundsRef().orderByChild('date');
-                    return roundService(fbRef.getRoundsRef(query)).$loaded();
-                },
-                currentAuth: function (auth) {
-                    return auth.$requireAuth();
-                }
-            }
-        })
         .when('/promille', {
             template: '<promille ></promille>',
         })
         .when('/rules', {
             template: '<rules></rules>'
         })
-        .when('/admin/courses', {
-            template: '<courses current-auth="$resolve.currentAuth" courses="$resolve.courses"></courses>',
-            resolve: {
-                currentAuth: function (auth) {
-                    return auth.$requireAuth();
-                },
-                courses: function (fbRef, courseService) {
-                    var query = fbRef.getCoursesRef().orderByChild('clubName');
-                    return courseService(query).$loaded();
-                }
-            }
-        })
-        .when('/leaderboard', {
-            template: '<leaderboard rounds="$resolve.rounds"></leaderboard>',
-            resolve: {
-                rounds: function (fbRef, roundService) {
-                    var query = fbRef.getRoundsRef().orderByChild('start');
-                    return roundService(query).$loaded();
-                }
-            }
-        })
+
         .otherwise('/')
 })
 
